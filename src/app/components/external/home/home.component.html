@@ -1,0 +1,9 @@
+<div class="container text-center mt-5">
+  <h1 class="display-4">Welcome to the Garments Inventory Management System</h1>
+  <p class="lead">Manage your garments inventory with ease.</p>
+
+  <div class="mt-4">
+    <button *ngIf="!authService.isLoggedIn()" class="btn btn-primary btn-lg" routerLink="/auth/login">Login</button>
+    <button *ngIf="!authService.isLoggedIn()" class="btn btn-secondary btn-lg" routerLink="/auth/register">Register</button>
+  </div>
+</div>
