@@ -8,6 +8,7 @@ import { ModeratordashboardComponent } from './dashboard/moderatordashboard/mode
 import { AdmindashboardComponent } from './dashboard/admindashboard/admindashboard.component';
 import { ListcategoryComponent } from './components/internal/category/listcategory/listcategory.component';
 import { CreatecategoryComponent } from './components/internal/category/createcategory/createcategory.component';
+import { UpdatecategoryComponent } from './components/internal/category/updatecategory/updatecategory.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   },
   { path: 'categorylist', component: ListcategoryComponent },
   { path: 'createcategory', component: CreatecategoryComponent },
+  { path: 'updatecategory/:Id', component: UpdatecategoryComponent },
 ];
 
 @NgModule({

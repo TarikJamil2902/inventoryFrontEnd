@@ -19,6 +19,8 @@ import { UserdashboardComponent } from './dashboard/userdashboard/userdashboard.
 import { ModeratordashboardComponent } from './dashboard/moderatordashboard/moderatordashboard.component';
 import { CreatecategoryComponent } from './components/internal/category/createcategory/createcategory.component';
 import { ListcategoryComponent } from './components/internal/category/listcategory/listcategory.component';
+import { UpdatecategoryComponent } from './components/internal/category/updatecategory/updatecategory.component';
+import { AboutComponent } from './components/external/about/about.component';
 
 
 
@@ -36,6 +38,8 @@ import { ListcategoryComponent } from './components/internal/category/listcatego
     ModeratordashboardComponent,
     CreatecategoryComponent,
     ListcategoryComponent,
+    UpdatecategoryComponent,
+    AboutComponent,
 
   ],
   imports: [

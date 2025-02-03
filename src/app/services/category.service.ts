@@ -17,20 +17,6 @@ export class CategoryService {
 
   constructor(private http: HttpClient) {}
 
-  // Fetch all categories
-  getCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(`${this.baseUrl}`);
-  }
-
-  // Fetch category by ID
-  getCategoryById(id: number): Observable<Category> {
-    return this.http.get<Category>(`${this.baseUrl}/${id}`);
-  }
-
-  // Add a new category
-  // addCategory(category: Category): Observable<Category> {
-  //   return this.http.post<Category>(`${this.baseUrl}`, category);
-  // }
   add(category: any) {
     return this.http.post(this.baseUrl + ("/create"), category);
   }
@@ -42,22 +28,11 @@ export class CategoryService {
     return this.http.delete(this.baseUrl + "/delete/" + id)
   }
 
-
-
   getById(id:any){
     return this.http.get(this.baseUrl + "/" + id);
   }
+  updateData(category:Category){
+    return this.http.put(this.baseUrl+ "/update/" + category.id, category)
+  }
 
-  // updateCategory(category:Category){
-  //   return this.http.put(this.baseUrl+ "/update/" + category.id, category)
-  // }
-  // // Update category
-  // updateCategory(id: number, category: Category): Observable<Category> {
-  //   return this.http.put<Category>(`${this.baseUrl}/${id}`, category);
-  // }
-
-  // // Delete category
-  // deleteCategory(id: number): Observable<void> {
-  //   return this.http.delete<void>(`${this.baseUrl}/${id}`);
-  // }
 }

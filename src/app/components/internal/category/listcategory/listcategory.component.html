@@ -4,12 +4,8 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone Number</th>
-        <th scope="col">Address</th>
-        <th scope="col">Course</th>
+        <th scope="col">Description</th>
+
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -20,7 +16,7 @@
         <td>{{ val.description }}</td>
 
         <td>
-          <a [routerLink]="['/su/', val.id]">
+          <a [routerLink]="['/updatecategory/', val.id]">
             <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
           </a>
           |
@@ -31,8 +27,8 @@
   </table>
 
   <div class="text-end">
-    <a routerLink="/sc">
-      <button type="button" class="btn btn-outline-dark ">Add New Student</button>
+    <a routerLink="/createcategory">
+      <button type="button" class="btn btn-outline-dark ">Add New Category</button>
     </a>
   </div>
 </div>
