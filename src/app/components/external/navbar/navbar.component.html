@@ -26,15 +26,20 @@
     <li class="nav-item">
       <a class="nav-link" routerLink="/dashboard/admindashboard">Contact</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/dashboard/admindashboard">Admin Dashboard</a>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Dashboard
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" routerLink="/admin">Admin</a></li>
+        <li><a class="dropdown-item" routerLink="/manager">Manager</a></li>
+        <li><a class="dropdown-item" routerLink="/employeedashboard">Employee</a></li>
+        <li><a class="dropdown-item" routerLink="/supplier">Supplier</a></li>
+        <li><a class="dropdown-item" routerLink="/customerdashboard">Customer</a></li>
+      </ul>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/dashboard/moderatordashboard">Moderator Dashboard</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/dashboard/userdashboard">User Dashboard</a>
-    </li>
+
     <li class="nav-item">
       <a class="nav-link" routerLink="/about">About</a>
     </li>

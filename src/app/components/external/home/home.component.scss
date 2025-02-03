@@ -1,0 +1,139 @@
+.section-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 50px 0;
+}
+
+.video_profile {
+  color: white;
+  font-size: 2rem;
+  span {
+    font-weight: bold;
+    color: #f4b400;
+  }
+}
+
+.btn-wrapper {
+  margin-top: 20px;
+
+  .image-wrap {
+    display: inline-block;
+    cursor: pointer;
+    img {
+      width: 80px;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.values-section {
+  background: #1a1a1a;
+  padding: 50px 0;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.snowtex_values {
+  font-size: 2rem;
+  font-weight: bold;
+  span {
+    color: #f4b400;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+
+  .outer-line {
+    width: 80px;
+    height: 2px;
+    background: #fff;
+    margin: 0 10px;
+  }
+
+  .fa-cogs {
+    font-size: 1.5rem;
+  }
+}
+
+.services-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.services-box-item {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 250px;
+
+  &:hover {
+    background: #f4b400;
+    color: black;
+    transform: translateY(-5px);
+  }
+
+  i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+.cool-facts {
+  text-align: center;
+  background: black;
+  color: white;
+  padding: 40px 20px;
+}
+
+.facts-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.fact {
+  text-align: center;
+}
+
+.fact i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.partners-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #222;
+  padding: 20px 0;
+}
+
+.logos-container {
+  display: flex;
+  gap: 30px;
+  animation: scroll 10s linear infinite;
+}
+
+.logo img {
+  height: 50px;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
