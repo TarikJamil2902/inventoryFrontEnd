@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/external/home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CategoryComponent } from './components/category/category.component';
+
 import { UserdashboardComponent } from './dashboard/userdashboard/userdashboard.component';
 import { ModeratordashboardComponent } from './dashboard/moderatordashboard/moderatordashboard.component';
 import { AdmindashboardComponent } from './dashboard/admindashboard/admindashboard.component';
+import { ListcategoryComponent } from './components/internal/category/listcategory/listcategory.component';
+import { CreatecategoryComponent } from './components/internal/category/createcategory/createcategory.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +19,8 @@ const routes: Routes = [
       { path: 'moderatordashboard', component: ModeratordashboardComponent },
     ]
   },
-  { path: 'categories', component: CategoryComponent },
+  { path: 'categorylist', component: ListcategoryComponent },
+  { path: 'createcategory', component: CreatecategoryComponent },
 ];
 
 @NgModule({
