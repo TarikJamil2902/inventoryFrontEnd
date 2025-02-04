@@ -1,0 +1,92 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="form-container">
+              <h2 class="form-header" style="color:blanchedalmond;">Update Product</h2>
+              <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label for="productId" class="form-label" style="color:blanchedalmond;">Product ID</label>
+                  <input type="number" class="form-control" id="productId" formControlName="productId" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="name" class="form-label" style="color:blanchedalmond;">Product Name</label>
+                  <input type="text" class="form-control" id="name" formControlName="name" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="description" class="form-label" style="color:blanchedalmond;">Description</label>
+                  <input type="text" class="form-control" id="description" formControlName="description" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="size" class="form-label" style="color:blanchedalmond;">Size</label>
+                  <input type="text" class="form-control" id="size" formControlName="size" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="color" class="form-label" style="color:blanchedalmond;">Color</label>
+                  <input type="text" class="form-control" id="color" formControlName="color" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="brand" class="form-label" style="color:blanchedalmond;">Brand</label>
+                  <input type="text" class="form-control" id="brand" formControlName="brand" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="unitPrice" class="form-label" style="color:blanchedalmond;">Unit Price</label>
+                  <input type="number" class="form-control" id="unitPrice" formControlName="unitPrice" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="costPrice" class="form-label" style="color:blanchedalmond;">Cost Price</label>
+                  <input type="number" class="form-control" id="costPrice" formControlName="costPrice" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="quantityInStock" class="form-label" style="color:blanchedalmond;">Quantity In Stock</label>
+                  <input type="number" class="form-control" id="quantityInStock" formControlName="quantityInStock" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="reorderLevel" class="form-label" style="color:blanchedalmond;">Reorder Level</label>
+                  <input type="number" class="form-control" id="reorderLevel" formControlName="reorderLevel" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="barcode" class="form-label" style="color:blanchedalmond;">Barcode</label>
+                  <input type="text" class="form-control" id="barcode" formControlName="barcode" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                  <input type="text" class="form-control" id="status" formControlName="status" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="imageUrl" class="form-label" style="color:blanchedalmond;">Image URL</label>
+                  <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="categoryId" class="form-label" style="color:blanchedalmond;">Category ID</label>
+                  <input type="number" class="form-control" id="categoryId" formControlName="categoryId" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="supplierId" class="form-label" style="color:blanchedalmond;">Supplier ID</label>
+                  <input type="number" class="form-control" id="supplierId" formControlName="supplierId" required>
+                </div>
+
+                <!-- Submit and Reset Buttons -->
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="form-container">
+              <h2 class="form-header" style="color:blanchedalmond;">Update Notification</h2>
+              <form [formGroup]="notificationForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label for="notificationId" class="form-label" style="color:blanchedalmond;">Notification ID</label>
+                  <input type="number" class="form-control" id="notificationId" formControlName="notificationId" required>
+              </div>
+                  <div class="mb-3">
+                      <label for="message" class="form-label" style="color:blanchedalmond;">Message</label>
+                      <input type="text" class="form-control" id="message" formControlName="message" required>
+                  </div>
+
+                  <div class="mb-3">
+                      <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                      <input type="text" class="form-control" id="status" formControlName="status" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="createdAt" class="form-label" style="color:blanchedalmond;">Created At</label>
+                    <input type="datetime-local" class="form-control" id="createdAt" formControlName="createdAt" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="notificationType" class="form-label" style="color:blanchedalmond;">Notification Type</label>
+                    <input type="text" class="form-control" id="notificationType" formControlName="notificationType" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="userName" class="form-label" style="color:blanchedalmond;">User Name</label>
+                    <input type="text" class="form-control" id="userName" formControlName="userName" required>
+                  </div>
+
+                  <!-- Submit and Reset Buttons -->
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

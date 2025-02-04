@@ -1,0 +1,87 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="form-container">
+              <h2 class="form-header" style="color:blanchedalmond;">Return Entry Form</h2>
+              <form [formGroup]="returnForm" (ngSubmit)="onSubmit()">
+
+                  <!-- Return ID -->
+                  <div class="mb-3">
+                      <label for="returnId" class="form-label" style="color:blanchedalmond;">Return ID</label>
+                      <input type="number" class="form-control" id="returnId" formControlName="returnId" required>
+                  </div>
+
+                  <!-- Customer Order ID -->
+                  <div class="mb-3">
+                      <label for="customerOrderId" class="form-label" style="color:blanchedalmond;">Customer Order ID</label>
+                      <input type="number" class="form-control" id="customerOrderId" formControlName="customerOrderId" required>
+                  </div>
+
+                  <!-- Supplier Return ID -->
+                  <div class="mb-3">
+                      <label for="supplierReturnId" class="form-label" style="color:blanchedalmond;">Supplier Return ID</label>
+                      <input type="number" class="form-control" id="supplierReturnId" formControlName="supplierReturnId" required>
+                  </div>
+
+                  <!-- Reason for Return -->
+                  <div class="mb-3">
+                      <label for="reasonForReturn" class="form-label" style="color:blanchedalmond;">Reason for Return</label>
+                      <input type="text" class="form-control" id="reasonForReturn" formControlName="reasonForReturn" required>
+                  </div>
+
+                  <!-- Return Date -->
+                  <div class="mb-3">
+                      <label for="returnDate" class="form-label" style="color:blanchedalmond;">Return Date</label>
+                      <input type="date" class="form-control" id="returnDate" formControlName="returnDate" required>
+                  </div>
+
+                  <!-- Return Status -->
+                  <div class="mb-3">
+                      <label for="returnStatus" class="form-label" style="color:blanchedalmond;">Return Status</label>
+                      <select class="form-control" id="returnStatus" formControlName="returnStatus" required>
+                          <option value="Pending">Pending</option>
+                          <option value="Processed">Processed</option>
+                      </select>
+                  </div>
+
+                  <!-- Amount Refunded -->
+                  <div class="mb-3">
+                      <label for="amountRefunded" class="form-label" style="color:blanchedalmond;">Amount Refunded</label>
+                      <input type="number" class="form-control" id="amountRefunded" formControlName="amountRefunded" required>
+                  </div>
+
+                  <!-- Return Type -->
+                  <div class="mb-3">
+                      <label for="returnType" class="form-label" style="color:blanchedalmond;">Return Type</label>
+                      <select class="form-control" id="returnType" formControlName="returnType" required>
+                          <option value="Full">Full</option>
+                          <option value="Partial">Partial</option>
+                      </select>
+                  </div>
+
+                  <!-- Refund Method -->
+                  <div class="mb-3">
+                      <label for="refundMethod" class="form-label" style="color:blanchedalmond;">Refund Method</label>
+                      <select class="form-control" id="refundMethod" formControlName="refundMethod" required>
+                          <option value="Store Credit">Store Credit</option>
+                          <option value="Original Payment">Original Payment</option>
+                      </select>
+                  </div>
+
+                  <!-- Quantity -->
+                  <div class="mb-3">
+                      <label for="quantity" class="form-label" style="color:blanchedalmond;">Quantity</label>
+                      <input type="number" class="form-control" id="quantity" formControlName="quantity" required>
+                  </div>
+
+                  <!-- Submit and Reset Buttons -->
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

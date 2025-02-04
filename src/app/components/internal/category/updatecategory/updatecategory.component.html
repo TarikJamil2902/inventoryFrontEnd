@@ -6,12 +6,12 @@
               <h2 class="form-header" style="color:blanchedalmond;">Update Form</h2>
               <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
-                  <label for="id" class="form-label" style="color:blanchedalmond;">ID</label>
-                  <input type="number" class="form-control" id="id" formControlName="id" required>
+                  <label for="categoryId" class="form-label" style="color:blanchedalmond;">ID</label>
+                  <input type="number" class="form-control" id="categoryId" formControlName="categoryId" required>
               </div>
                   <div class="mb-3">
-                      <label for="name" class="form-label" style="color:blanchedalmond;">Full Name</label>
-                      <input type="text" class="form-control" id="name" formControlName="name" required>
+                      <label for="categoryName" class="form-label" style="color:blanchedalmond;">Full Name</label>
+                      <input type="text" class="form-control" id="categoryName" formControlName="categoryName" required>
                   </div>
 
 
@@ -19,7 +19,10 @@
                       <label for="description" class="form-label"style="color:blanchedalmond;">Description</label>
                       <input type="text" class="form-control" id="description" formControlName="description" min="5" required>
                   </div>
-
+                  <div class="mb-3">
+                    <label for="status" class="form-label"style="color:blanchedalmond;">Status</label>
+                    <input type="text" class="form-control" id="status" formControlName="status" min="5" required>
+                </div>
 
                   <!-- Submit and Reset Buttons -->
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">

@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">Notification ID</th>
+        <th scope="col">Message</th>
+        <th scope="col">Status</th>
+        <th scope="col">Created At</th>
+        <th scope="col">Notification Type</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let val of notificationList">
+        <td>{{ val.notificationId }}</td>
+        <td>{{ val.message }}</td>
+        <td>{{ val.status }}</td>
+        <td>{{ val.createdAt }}</td>
+        <td>{{ val.notificationType }}</td>
+        <td>{{ val.userName }}</td>
+        <td>
+          <a [routerLink]="['/updatenotification/', val.notificationId]">
+            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+          </a>
+          |
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(val.notificationId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createnotification">
+      <button type="button" class="btn btn-outline-dark">Add New Notification</button>
+    </a>
+  </div>
+</div>

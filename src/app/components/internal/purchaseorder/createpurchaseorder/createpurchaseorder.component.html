@@ -1,0 +1,69 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="form-container">
+              <h2 class="form-header" style="color:blanchedalmond;">Entry Form</h2>
+              <form [formGroup]="purchaseOrderForm" (ngSubmit)="onSubmit()">
+
+                  <!-- Purchase Order ID -->
+                  <div class="mb-3">
+                      <label for="purchaseOrderId" class="form-label" style="color:blanchedalmond;">Purchase Order ID</label>
+                      <input type="number" class="form-control" id="purchaseOrderId" formControlName="purchaseOrderId" required>
+                  </div>
+
+                  <!-- Supplier ID -->
+                  <div class="mb-3">
+                      <label for="supplierId" class="form-label" style="color:blanchedalmond;">Supplier ID</label>
+                      <input type="number" class="form-control" id="supplierId" formControlName="supplierId" required>
+                  </div>
+
+                  <!-- Purchase Order Item IDs -->
+                  <div class="mb-3">
+                      <label for="purchaseOrderItemIds" class="form-label" style="color:blanchedalmond;">Purchase Order Item IDs</label>
+                      <input type="text" class="form-control" id="purchaseOrderItemIds" formControlName="purchaseOrderItemIds" required>
+                  </div>
+
+                  <!-- Order Date -->
+                  <div class="mb-3">
+                      <label for="orderDate" class="form-label" style="color:blanchedalmond;">Order Date</label>
+                      <input type="date" class="form-control" id="orderDate" formControlName="orderDate" required>
+                  </div>
+
+                  <!-- Delivery Date -->
+                  <div class="mb-3">
+                      <label for="deliveryDate" class="form-label" style="color:blanchedalmond;">Delivery Date</label>
+                      <input type="date" class="form-control" id="deliveryDate" formControlName="deliveryDate" required>
+                  </div>
+
+                  <!-- Status -->
+                  <div class="mb-3">
+                      <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                      <select class="form-control" id="status" formControlName="status" required>
+                          <option value="PENDING">PENDING</option>
+                          <option value="RECEIVED">RECEIVED</option>
+                      </select>
+                  </div>
+
+                  <!-- Total Amount -->
+                  <div class="mb-3">
+                      <label for="totalAmount" class="form-label" style="color:blanchedalmond;">Total Amount</label>
+                      <input type="number" class="form-control" id="totalAmount" formControlName="totalAmount" required>
+                  </div>
+
+                  <!-- Payment Terms -->
+                  <div class="mb-3">
+                      <label for="paymentTerms" class="form-label" style="color:blanchedalmond;">Payment Terms</label>
+                      <input type="text" class="form-control" id="paymentTerms" formControlName="paymentTerms" required>
+                  </div>
+
+                  <!-- Submit and Reset Buttons -->
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

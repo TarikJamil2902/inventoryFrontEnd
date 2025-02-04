@@ -18,7 +18,7 @@ export class AdminsidenavComponent {
     { label: 'Returns', icon: 'fas fa-undo', link: '/admin/returns' },
     { label: 'Inventory', icon: 'fas fa-boxes', link: '/admin/inventory' },
     { label: 'Products', icon: 'fas fa-cube', link: '/admin/products' },
-    { label: 'Categories', icon: 'fas fa-list', link: '/admin/categories' },
+    { label: 'Categories', icon: 'fas fa-list', link: '' },
     { label: 'Suppliers', icon: 'fas fa-truck', link: '/admin/suppliers' },
     { label: 'Purchase Orders', icon: 'fas fa-file-invoice', link: '/admin/purchase-orders' },
     { label: 'Employees', icon: 'fas fa-user-tie', link: '/admin/employees' },

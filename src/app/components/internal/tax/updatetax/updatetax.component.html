@@ -1,0 +1,58 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="form-container">
+              <h2 class="form-header" style="color:blanchedalmond;">Update Tax</h2>
+              <form [formGroup]="taxForm" (ngSubmit)="onSubmit()">
+
+                <div class="mb-3">
+                  <label for="taxId" class="form-label" style="color:blanchedalmond;">Tax ID</label>
+                  <input type="number" class="form-control" id="taxId" formControlName="taxId" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="taxType" class="form-label" style="color:blanchedalmond;">Tax Type</label>
+                  <input type="text" class="form-control" id="taxType" formControlName="taxType" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="rate" class="form-label" style="color:blanchedalmond;">Tax Rate (%)</label>
+                  <input type="number" class="form-control" id="rate" formControlName="rate" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="description" class="form-label" style="color:blanchedalmond;">Description</label>
+                  <input type="text" class="form-control" id="description" formControlName="description" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="taxCategory" class="form-label" style="color:blanchedalmond;">Tax Category</label>
+                  <input type="text" class="form-control" id="taxCategory" formControlName="taxCategory" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="isActive" class="form-label" style="color:blanchedalmond;">Is Active</label>
+                  <input type="checkbox" class="form-control" id="isActive" formControlName="isActive">
+                </div>
+
+                <div class="mb-3">
+                  <label for="effectiveFrom" class="form-label" style="color:blanchedalmond;">Effective From</label>
+                  <input type="date" class="form-control" id="effectiveFrom" formControlName="effectiveFrom" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="effectiveTill" class="form-label" style="color:blanchedalmond;">Effective Till</label>
+                  <input type="date" class="form-control" id="effectiveTill" formControlName="effectiveTill" required>
+                </div>
+
+                <!-- Submit and Reset Buttons -->
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

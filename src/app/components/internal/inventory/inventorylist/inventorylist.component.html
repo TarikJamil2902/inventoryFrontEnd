@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">Inventory ID</th>
+        <th scope="col">Product ID</th>
+        <th scope="col">Warehouse ID</th>
+        <th scope="col">Quantity On Hand</th>
+        <th scope="col">Quantity Allocated</th>
+        <th scope="col">Quantity Available</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let val of inventoryList">
+        <td>{{ val.inventoryId }}</td>
+        <td>{{ val.productId }}</td>
+        <td>{{ val.warehouseId }}</td>
+        <td>{{ val.quantityOnHand }}</td>
+        <td>{{ val.quantityAllocated }}</td>
+        <td>{{ val.quantityAvailable }}</td>
+        <td>
+          <a [routerLink]="['/updateinventory/', val.inventoryId]">
+            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+          </a>
+          |
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(val.inventoryId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createinventory">
+      <button type="button" class="btn btn-outline-dark">Add New Inventory</button>
+    </a>
+  </div>
+</div>

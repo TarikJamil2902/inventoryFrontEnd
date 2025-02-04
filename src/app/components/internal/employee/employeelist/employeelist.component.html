@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Department</th>
+        <th scope="col">Job Title</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let val of employeeList">
+        <td>{{ val.employeeId }}</td>
+        <td>{{ val.firstName }}</td>
+        <td>{{ val.lastName }}</td>
+        <td>{{ val.email }}</td>
+        <td>{{ val.phone }}</td>
+        <td>{{ val.department }}</td>
+        <td>{{ val.jobTitle }}</td>
+        <td>{{ val.status }}</td>
+
+        <td>
+          <a [routerLink]="['/updateemployee/', val.employeeId]">
+            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+          </a>
+          |
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(val.employeeId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createemployee">
+      <button type="button" class="btn btn-outline-dark">Add New Employee</button>
+    </a>
+  </div>
+</div>

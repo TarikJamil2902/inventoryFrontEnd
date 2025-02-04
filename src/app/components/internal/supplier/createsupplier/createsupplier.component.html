@@ -1,0 +1,63 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="form-container">
+              <h2 class="form-header" style="color:blanchedalmond;">Entry Form</h2>
+              <form [formGroup]="supplierForm" (ngSubmit)="onSubmit()">
+
+                  <!-- Supplier Name -->
+                  <div class="mb-3">
+                      <label for="name" class="form-label" style="color:blanchedalmond;">Supplier Name</label>
+                      <input type="text" class="form-control" id="name" formControlName="name" required>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="mb-3">
+                      <label for="email" class="form-label" style="color:blanchedalmond;">Email</label>
+                      <input type="email" class="form-control" id="email" formControlName="email" required>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="mb-3">
+                      <label for="phone" class="form-label" style="color:blanchedalmond;">Phone</label>
+                      <input type="tel" class="form-control" id="phone" formControlName="phone" required>
+                  </div>
+
+                  <!-- Address -->
+                  <div class="mb-3">
+                      <label for="address" class="form-label" style="color:blanchedalmond;">Address</label>
+                      <input type="text" class="form-control" id="address" formControlName="address" required>
+                  </div>
+
+                  <!-- Payment Terms -->
+                  <div class="mb-3">
+                      <label for="paymentTerms" class="form-label" style="color:blanchedalmond;">Payment Terms</label>
+                      <input type="text" class="form-control" id="paymentTerms" formControlName="paymentTerms" required>
+                  </div>
+
+                  <!-- Supplier Rating -->
+                  <div class="mb-3">
+                      <label for="supplierRating" class="form-label" style="color:blanchedalmond;">Supplier Rating</label>
+                      <input type="number" class="form-control" id="supplierRating" formControlName="supplierRating" min="1" max="5" required>
+                  </div>
+
+                  <!-- Status -->
+                  <div class="mb-3">
+                      <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                      <select class="form-control" id="status" formControlName="status" required>
+                          <option value="Active">Active</option>
+                          <option value="Inactive">Inactive</option>
+                      </select>
+                  </div>
+
+                  <!-- Submit and Reset Buttons -->
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

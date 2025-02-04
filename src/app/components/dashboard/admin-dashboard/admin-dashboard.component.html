@@ -1,8 +1,23 @@
-
-
-
 <app-adminsidenav></app-adminsidenav>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>Admin Dashboard</h2>
+      <div class="btn-group mt-3">
+        <a routerLink="/createcategory" class="btn btn-primary">Add Category</a>
+        <a routerLink="/categorylist" class="btn btn-secondary">Categorie List</a>
+      </div>
+      <div class="btn-group mt-3">
+        <a routerLink="/createcustomer" class="btn btn-primary">Add Customer</a>
+        <a routerLink="/customerlist" class="btn btn-secondary">Categorie List</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="content">
   <router-outlet></router-outlet>
 </div>
+
 

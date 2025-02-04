@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">Payment Terms</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let supplier of supplierList">
+        <td>{{ supplier.supplierId }}</td>
+        <td>{{ supplier.name }}</td>
+        <td>{{ supplier.email }}</td>
+        <td>{{ supplier.phone }}</td>
+        <td>{{ supplier.address }}</td>
+        <td>{{ supplier.paymentTerms }}</td>
+        <td>{{ supplier.supplierRating }}</td>
+        <td>{{ supplier.status }}</td>
+        <td>
+          <a [routerLink]="['/updatesupplier', supplier.supplierId]" class="btn btn-outline-success btn-sm me-2">Edit</a>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(supplier.supplierId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createsupplier" class="btn btn-outline-dark">Add New Supplier</a>
+  </div>
+</div>

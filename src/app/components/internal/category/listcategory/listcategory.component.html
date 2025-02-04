@@ -5,22 +5,24 @@
         <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Description</th>
+        <th scope="col">Status</th>
 
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let val of categoryList">
-        <td>{{ val.id }}</td>
-        <td>{{ val.name }}</td>
+        <td>{{ val.categoryId }}</td>
+        <td>{{ val.categoryName }}</td>
         <td>{{ val.description }}</td>
+        <td>{{ val.status }}</td>
 
         <td>
-          <a [routerLink]="['/updatecategory/', val.id]">
+          <a [routerLink]="['/updatecategory/', val.categoryId]">
             <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
           </a>
           |
-          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(val.id)">Delete</button>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(val.categoryId)">Delete</button>
         </td>
       </tr>
     </tbody>

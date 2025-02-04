@@ -45,9 +45,9 @@ export class UpdatecategoryComponent implements OnInit {
 
 
   categoryForm: FormGroup = new FormGroup({
-    id: new FormControl(),
-    name: new FormControl(),
+    categoryId: new FormControl(),
+    categoryName: new FormControl(),
     description: new FormControl(),
-
+    status: new FormControl()
   });
 }

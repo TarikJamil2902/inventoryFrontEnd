@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Order ID</th>
+        <th scope="col">Customer ID</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Payment Method</th>
+        <th scope="col">Payment Status</th>
+        <th scope="col">Currency</th>
+        <th scope="col">Transaction ID</th>
+        <th scope="col">Payment Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of paymentList">
+        <td>{{ payment.id }}</td>
+        <td>{{ payment.orderId }}</td>
+        <td>{{ payment.customerId }}</td>
+        <td>{{ payment.amount }}</td>
+        <td>{{ payment.paymentMethod }}</td>
+        <td>{{ payment.paymentStatus }}</td>
+        <td>{{ payment.currency }}</td>
+        <td>{{ payment.transactionId }}</td>
+        <td>{{ payment.paymentDate }}</td>
+        <td>
+          <a [routerLink]="['/updatepayment', payment.id]" class="btn btn-outline-success btn-sm me-2">Edit</a>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(payment.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createpayment" class="btn btn-outline-dark">Add New Payment</a>
+  </div>
+</div>

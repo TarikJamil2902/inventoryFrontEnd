@@ -1,0 +1,52 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="form-container">
+        <h2 class="form-header" style="color: blanchedalmond;">Update Discount</h2>
+        <form [formGroup]="discountForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="discountId" class="form-label" style="color: blanchedalmond;">Discount ID</label>
+            <input type="number" class="form-control" id="discountId" formControlName="discountId" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="discountCode" class="form-label" style="color: blanchedalmond;">Discount Code</label>
+            <input type="text" class="form-control" id="discountCode" formControlName="discountCode" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label" style="color: blanchedalmond;">Description</label>
+            <input type="text" class="form-control" id="description" formControlName="description" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="percentage" class="form-label" style="color: blanchedalmond;">Percentage</label>
+            <input type="number" class="form-control" id="percentage" formControlName="percentage" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="startDate" class="form-label" style="color: blanchedalmond;">Start Date</label>
+            <input type="date" class="form-control" id="startDate" formControlName="startDate" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="endDate" class="form-label" style="color: blanchedalmond;">End Date</label>
+            <input type="date" class="form-control" id="endDate" formControlName="endDate" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="status" class="form-label" style="color: blanchedalmond;">Status</label>
+            <input type="text" class="form-control" id="status" formControlName="status" required>
+          </div>
+
+          <!-- Submit and Reset Buttons -->
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

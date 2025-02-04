@@ -25,9 +25,10 @@ export class CreatecategoryComponent implements OnInit{
   }
 
   categoryForm: FormGroup = new FormGroup({
-    name: new FormControl(),
+    categoryId: new FormControl(),
+    categoryName: new FormControl(),
     description: new FormControl(),
-
+    status: new FormControl()
   });
 
 }

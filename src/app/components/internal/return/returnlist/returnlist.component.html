@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Customer Order ID</th>
+        <th scope="col">Supplier Return ID</th>
+        <th scope="col">Reason</th>
+        <th scope="col">Return Date</th>
+        <th scope="col">Status</th>
+        <th scope="col">Amount Refunded</th>
+        <th scope="col">Return Type</th>
+        <th scope="col">Refund Method</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let returnItem of returnList">
+        <td>{{ returnItem.returnId }}</td>
+        <td>{{ returnItem.customerOrderId }}</td>
+        <td>{{ returnItem.supplierReturnId }}</td>
+        <td>{{ returnItem.reasonForReturn }}</td>
+        <td>{{ returnItem.returnDate }}</td>
+        <td>{{ returnItem.returnStatus }}</td>
+        <td>{{ returnItem.amountRefunded }}</td>
+        <td>{{ returnItem.returnType }}</td>
+        <td>{{ returnItem.refundMethod }}</td>
+        <td>{{ returnItem.quantity }}</td>
+        <td>
+          <a [routerLink]="['/updatereturn', returnItem.returnId]" class="btn btn-outline-success btn-sm me-2">Edit</a>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(returnItem.returnId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createreturn" class="btn btn-outline-dark">Add New Return</a>
+  </div>
+</div>

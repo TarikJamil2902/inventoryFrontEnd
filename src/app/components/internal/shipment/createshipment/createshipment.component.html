@@ -1,0 +1,70 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="form-container">
+              <h2 class="form-header" style="color:blanchedalmond;">Entry Form</h2>
+              <form [formGroup]="shipmentForm" (ngSubmit)="onSubmit()">
+
+                  <!-- Order ID -->
+                  <div class="mb-3">
+                      <label for="orderId" class="form-label" style="color:blanchedalmond;">Order ID</label>
+                      <input type="number" class="form-control" id="orderId" formControlName="orderId" required>
+                  </div>
+
+                  <!-- Shipping Date -->
+                  <div class="mb-3">
+                      <label for="shippingDate" class="form-label" style="color:blanchedalmond;">Shipping Date</label>
+                      <input type="date" class="form-control" id="shippingDate" formControlName="shippingDate" required>
+                  </div>
+
+                  <!-- Delivery Date -->
+                  <div class="mb-3">
+                      <label for="deliveryDate" class="form-label" style="color:blanchedalmond;">Delivery Date</label>
+                      <input type="date" class="form-control" id="deliveryDate" formControlName="deliveryDate" required>
+                  </div>
+
+                  <!-- Carrier Name -->
+                  <div class="mb-3">
+                      <label for="carrierName" class="form-label" style="color:blanchedalmond;">Carrier Name</label>
+                      <input type="text" class="form-control" id="carrierName" formControlName="carrierName" required>
+                  </div>
+
+                  <!-- Tracking Number -->
+                  <div class="mb-3">
+                      <label for="trackingNumber" class="form-label" style="color:blanchedalmond;">Tracking Number</label>
+                      <input type="text" class="form-control" id="trackingNumber" formControlName="trackingNumber" required>
+                  </div>
+
+                  <!-- Shipment Status -->
+                  <div class="mb-3">
+                      <label for="shipmentStatus" class="form-label" style="color:blanchedalmond;">Shipment Status</label>
+                      <select class="form-control" id="shipmentStatus" formControlName="shipmentStatus" required>
+                          <option value="SHIPPED">Shipped</option>
+                          <option value="DELIVERED">Delivered</option>
+                          <option value="PENDING">Pending</option>
+                      </select>
+                  </div>
+
+                  <!-- Delivery Address -->
+                  <div class="mb-3">
+                      <label for="deliveryAddress" class="form-label" style="color:blanchedalmond;">Delivery Address</label>
+                      <input type="text" class="form-control" id="deliveryAddress" formControlName="deliveryAddress" required>
+                  </div>
+
+                  <!-- Shipping Cost -->
+                  <div class="mb-3">
+                      <label for="shippingCost" class="form-label" style="color:blanchedalmond;">Shipping Cost</label>
+                      <input type="number" class="form-control" id="shippingCost" formControlName="shippingCost" required>
+                  </div>
+
+                  <!-- Submit and Reset Buttons -->
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

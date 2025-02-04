@@ -3,17 +3,17 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Category {
-  id: number;
-  name: string;
+  categoryId: number;
+  categoryName: string;
   description: string;
-  productIds: number[];
+  status: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  private baseUrl = 'http://localhost:8090/api/categories';
+  private baseUrl = 'http://localhost:8080/api/categories';
 
   constructor(private http: HttpClient) {}
 
@@ -24,15 +24,15 @@ export class CategoryService {
     return this.http.get(this.baseUrl);
   }
 
-  remove(id: any) {
-    return this.http.delete(this.baseUrl + "/delete/" + id)
+  remove(categoryId: any) {
+    return this.http.delete(this.baseUrl + "/delete/" + categoryId)
   }
 
-  getById(id:any){
-    return this.http.get(this.baseUrl + "/" + id);
+  getById(categoryId:any){
+    return this.http.get(this.baseUrl + "/" + categoryId);
   }
   updateData(category:Category){
-    return this.http.put(this.baseUrl+ "/update/" + category.id, category)
+    return this.http.put(this.baseUrl+ "/update/" + category.categoryId, category)
   }
 
 }

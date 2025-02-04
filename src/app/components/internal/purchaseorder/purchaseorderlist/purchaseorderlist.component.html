@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Supplier ID</th>
+        <th scope="col">Order Date</th>
+        <th scope="col">Delivery Date</th>
+        <th scope="col">Status</th>
+        <th scope="col">Total Amount</th>
+        <th scope="col">Payment Terms</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of purchaseOrderList">
+        <td>{{ order.purchaseOrderId }}</td>
+        <td>{{ order.supplierId }}</td>
+        <td>{{ order.orderDate }}</td>
+        <td>{{ order.deliveryDate }}</td>
+        <td>{{ order.status }}</td>
+        <td>{{ order.totalAmount }}</td>
+        <td>{{ order.paymentTerms }}</td>
+        <td>
+          <a [routerLink]="['/updatepurchaseorder', order.purchaseOrderId]" class="btn btn-outline-success btn-sm me-2">Edit</a>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(order.purchaseOrderId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createpurchaseorder" class="btn btn-outline-dark">Add New Purchase Order</a>
+  </div>
+</div>

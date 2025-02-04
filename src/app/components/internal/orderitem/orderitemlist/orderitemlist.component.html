@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Order ID</th>
+        <th scope="col">Product ID</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Total Price</th>
+        <th scope="col">Discount</th>
+        <th scope="col">Tax</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let orderItem of orderItemsList">
+        <td>{{ orderItem.id }}</td>
+        <td>{{ orderItem.orderId }}</td>
+        <td>{{ orderItem.productId }}</td>
+        <td>{{ orderItem.quantity }}</td>
+        <td>{{ orderItem.unitPrice }}</td>
+        <td>{{ orderItem.totalPrice }}</td>
+        <td>{{ orderItem.discount }}</td>
+        <td>{{ orderItem.tax }}</td>
+        <td>
+          <a [routerLink]="['/updateorderitem/', orderItem.id]" class="btn btn-outline-success btn-sm me-2">Edit</a>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(orderItem.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createorderitem" class="btn btn-outline-dark">Add New Order Item</a>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Tax Type</th>
+        <th scope="col">Rate (%)</th>
+        <th scope="col">Description</th>
+        <th scope="col">Category</th>
+        <th scope="col">Status</th>
+        <th scope="col">Effective From</th>
+        <th scope="col">Effective Till</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tax of taxList">
+        <td>{{ tax.taxId }}</td>
+        <td>{{ tax.taxType }}</td>
+        <td>{{ tax.rate }}</td>
+        <td>{{ tax.description }}</td>
+        <td>{{ tax.taxCategory }}</td>
+        <td>{{ tax.isActive ? 'Active' : 'Inactive' }}</td>
+        <td>{{ tax.effectiveFrom }}</td>
+        <td>{{ tax.effectiveTill || 'N/A' }}</td>
+        <td>
+          <a [routerLink]="['/updatetax', tax.taxId]" class="btn btn-outline-success btn-sm me-2">Edit</a>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(tax.taxId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/createtax" class="btn btn-outline-dark">Add New Tax</a>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="form-container">
+        <h2 class="form-header" style="color: blanchedalmond;">Customer Entry Form</h2>
+        <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+
+          <!-- First Name -->
+          <div class="mb-3">
+            <label for="firstName" class="form-label" style="color: blanchedalmond;">First Name</label>
+            <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+          </div>
+
+          <!-- Last Name -->
+          <div class="mb-3">
+            <label for="lastName" class="form-label" style="color: blanchedalmond;">Last Name</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label" style="color: blanchedalmond;">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email" required>
+          </div>
+
+          <!-- Phone -->
+          <div class="mb-3">
+            <label for="phone" class="form-label" style="color: blanchedalmond;">Phone</label>
+            <input type="text" class="form-control" id="phone" formControlName="phone" required>
+          </div>
+
+          <!-- Billing Address -->
+          <div class="mb-3">
+            <label for="billingAddress" class="form-label" style="color: blanchedalmond;">Billing Address</label>
+            <input type="text" class="form-control" id="billingAddress" formControlName="billingAddress" required>
+          </div>
+
+          <!-- Shipping Address -->
+          <div class="mb-3">
+            <label for="shippingAddress" class="form-label" style="color: blanchedalmond;">Shipping Address</label>
+            <input type="text" class="form-control" id="shippingAddress" formControlName="shippingAddress" required>
+          </div>
+
+          <!-- Loyalty Points -->
+          <div class="mb-3">
+            <label for="loyaltyPoints" class="form-label" style="color: blanchedalmond;">Loyalty Points</label>
+            <input type="number" class="form-control" id="loyaltyPoints" formControlName="loyaltyPoints">
+          </div>
+
+          <!-- Customer Type -->
+          <div class="mb-3">
+            <label for="customerType" class="form-label" style="color: blanchedalmond;">Customer Type</label>
+            <select class="form-control" id="customerType" formControlName="customerType" required>
+              <option value="Regular">Regular</option>
+              <option value="VIP">VIP</option>
+            </select>
+          </div>
+
+          <!-- Status -->
+          <div class="mb-3">
+            <label for="status" class="form-label" style="color: blanchedalmond;">Status</label>
+            <select class="form-control" id="status" formControlName="status" required>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+          </div>
+
+          <!-- Submit and Reset Buttons -->
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+            <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid">Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

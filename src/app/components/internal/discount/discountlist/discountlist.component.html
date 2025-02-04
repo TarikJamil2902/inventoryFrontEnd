@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <table class="table table-dark table-striped table-hover table-bordered text-center">
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col">Discount ID</th>
+        <th scope="col">Discount Code</th>
+        <th scope="col">Description</th>
+        <th scope="col">Percentage</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let val of discountList">
+        <td>{{ val.discountId }}</td>
+        <td>{{ val.discountCode }}</td>
+        <td>{{ val.description }}</td>
+        <td>{{ val.percentage }}%</td>
+        <td>{{ val.startDate }}</td>
+        <td>{{ val.endDate }}</td>
+        <td>{{ val.status }}</td>
+
+        <td>
+          <a [routerLink]="['/updatediscount/', val.discountId]">
+            <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
+          </a>
+          |
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(val.discountId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-end">
+    <a routerLink="/creatediscount">
+      <button type="button" class="btn btn-outline-dark">Add New Discount</button>
+    </a>
+  </div>
+</div>

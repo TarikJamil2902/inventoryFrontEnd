@@ -1,0 +1,69 @@
+<div class="container">
+  <!-- Form Container -->
+  <div class="row justify-content-center">
+      <div class="col-md-8">
+          <div class="form-container">
+              <h2 class="form-header" style="color:blanchedalmond;">Employee Entry Form</h2>
+              <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+
+                  <!-- Employee ID -->
+                  <div class="mb-3">
+                      <label for="employeeId" class="form-label" style="color:blanchedalmond;">Employee ID</label>
+                      <input type="number" class="form-control" id="employeeId" formControlName="employeeId" required>
+                  </div>
+
+                  <!-- First Name -->
+                  <div class="mb-3">
+                      <label for="firstName" class="form-label" style="color:blanchedalmond;">First Name</label>
+                      <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="mb-3">
+                      <label for="lastName" class="form-label" style="color:blanchedalmond;">Last Name</label>
+                      <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="mb-3">
+                      <label for="email" class="form-label" style="color:blanchedalmond;">Email</label>
+                      <input type="email" class="form-control" id="email" formControlName="email" required>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="mb-3">
+                      <label for="phone" class="form-label" style="color:blanchedalmond;">Phone</label>
+                      <input type="text" class="form-control" id="phone" formControlName="phone" required>
+                  </div>
+
+                  <!-- Department -->
+                  <div class="mb-3">
+                      <label for="department" class="form-label" style="color:blanchedalmond;">Department</label>
+                      <input type="text" class="form-control" id="department" formControlName="department" required>
+                  </div>
+
+                  <!-- Job Title -->
+                  <div class="mb-3">
+                      <label for="jobTitle" class="form-label" style="color:blanchedalmond;">Job Title</label>
+                      <input type="text" class="form-control" id="jobTitle" formControlName="jobTitle" required>
+                  </div>
+
+                  <!-- Status -->
+                  <div class="mb-3">
+                      <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                      <select class="form-control" id="status" formControlName="status" required>
+                          <option value="Active">Active</option>
+                          <option value="Inactive">Inactive</option>
+                      </select>
+                  </div>
+
+                  <!-- Submit and Reset Buttons -->
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
