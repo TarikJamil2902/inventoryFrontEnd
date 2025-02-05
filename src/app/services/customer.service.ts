@@ -23,11 +23,11 @@ export class CustomerService {
 
   constructor(private http: HttpClient) {}
 
-  add(customer: CustomerDTO): Observable<any> {
+
+  add(customer: any): Observable<any> {
     return this.http.post(this.baseUrl + '/create', customer);
   }
-
-  getAll(): Observable<CustomerDTO[]> {
+  getAll(): Observable<any[]> {
     return this.http.get<CustomerDTO[]>(this.baseUrl);
   }
 
@@ -35,11 +35,11 @@ export class CustomerService {
     return this.http.delete(this.baseUrl + '/delete/' + customerId);
   }
 
-  getById(customerId: number): Observable<CustomerDTO> {
+  getById(customerId: number): Observable<any> {
     return this.http.get<CustomerDTO>(this.baseUrl + '/' + customerId);
   }
 
-  updateData(customer: CustomerDTO): Observable<any> {
+  updateData(customer: any): Observable<any> {
     return this.http.put(this.baseUrl + '/update/' + customer.customerId, customer);
   }
 }

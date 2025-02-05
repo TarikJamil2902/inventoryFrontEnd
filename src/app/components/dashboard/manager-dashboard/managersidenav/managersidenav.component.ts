@@ -16,7 +16,7 @@ export class ManagersidenavComponent {
   { label: 'Shipments', icon: 'fas fa-truck', link: '/manager/shipments' },
   { label: 'Purchase Orders', icon: 'fas fa-file-invoice', link: '/manager/purchase-orders' },
   { label: 'Suppliers', icon: 'fas fa-truck', link: '/manager/suppliers' },
-  { label: 'Employees', icon: 'fas fa-users-cog', link: '/manager/employees' },
+  { label: 'Employees', icon: 'fas fa-users-cog', link: '/employeelist' },
   { label: 'Reports', icon: 'fas fa-chart-line', link: '/manager/reports' },
   { label: 'Logout', icon: 'fas fa-sign-out-alt', link: '/logout' }
 ];

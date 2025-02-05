@@ -11,10 +11,12 @@ import { CustomerService, CustomerDTO } from 'src/app/services/customer.service'
 export class CreatecustomerComponent implements OnInit {
   constructor(private customerService: CustomerService, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Initialization logic (if required)
+  }
 
   customerForm: FormGroup = new FormGroup({
-    
+
     firstName: new FormControl(),
     lastName: new FormControl(),
     email: new FormControl(),
@@ -23,18 +25,24 @@ export class CreatecustomerComponent implements OnInit {
     shippingAddress: new FormControl(),
     loyaltyPoints: new FormControl(),
     customerType: new FormControl(),
-    status: new FormControl()
+    status: new FormControl('Active')
   });
 
   onSubmit() {
-    if (this.customerForm.valid) {
-      this.customerService.add(this.customerForm.value as CustomerDTO).subscribe({
-        next: () => {
-          console.log('Customer created successfully');
-          this.router.navigateByUrl('/customerlist');
-        },
-        error: (err) => console.error('Error creating customer:', err)
-      });
-    }
+    this.customerService.add(this.customerForm.value).subscribe((res: any) => {
+      console.log("Created successfully");
+      this.router.navigateByUrl('/customerlist'); // Adjust the route accordingly
+    });
   }
+  // onSubmit() {
+  //   if (this.customerForm.valid) {
+  //     this.customerService.add(this.customerForm.value as any).subscribe({
+  //       next: () => {
+  //         console.log('Customer created successfully');
+  //         this.router.navigateByUrl('/customerlist');
+  //       },
+  //       error: (err) => console.error('Error creating customer:', err)
+  //     });
+  //   }
+  // }
 }

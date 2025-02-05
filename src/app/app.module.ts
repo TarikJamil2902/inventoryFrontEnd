@@ -82,6 +82,8 @@ import { CreateNotificationComponent } from './components/internal/notification/
 import { CreateOrderComponent } from './components/internal/order/createorder/createorder.component';
 import { CreateProductComponent } from './components/internal/product/createproduct/createproduct.component';
 import { AdminLandingComponent } from './components/dashboard/admin-dashboard/admin-landing/admin-landing.component';
+import { ManagerLandingComponent } from './components/dashboard/manager-dashboard/manager-landing/manager-landing.component';
+import { EmployeeLandingComponent } from './components/dashboard/employee-dashboard/employee-landing/employee-landing.component';
 
 @NgModule({
   declarations: [
@@ -162,6 +164,8 @@ import { AdminLandingComponent } from './components/dashboard/admin-dashboard/ad
 
     CreatewarehouseComponent,
       AdminLandingComponent,
+      ManagerLandingComponent,
+      EmployeeLandingComponent,
 
   ],
   imports: [

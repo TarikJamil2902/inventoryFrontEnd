@@ -1,0 +1,118 @@
+
+
+
+
+
+
+
+
+<div class="landing-container p-4">
+  <div class="container-fluid">
+
+    <!-- Summary Cards -->
+    <div class="row">
+      <div class="col-md-3 mb-3" *ngFor="let card of dashboardSummary">
+      <div class="card shadow-sm text-white bg-dark p-3 rounded-circle" style="border-radius: 50%;">
+        <div class="card-body d-flex align-items-center">
+        <i class="fa" [ngClass]="card.icon" style="font-size: 24px; margin-right: 10px;"></i>
+        <div>
+          <h5 class="card-title">{{ card.value }}</h5>
+          <p class="card-text">{{ card.title }}</p>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <!-- Recent Payments & Orders -->
+    <div class="row mt-4">
+      <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-dark text-white">Recent Payments</div>
+        <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+          <thead class="thead-dark">
+            <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Method</th>
+            <th>Date</th>
+            <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let payment of payments">
+            <td>{{ payment.id }}</td>
+            <td>{{ payment.amount }}</td>
+            <td>{{ payment.method }}</td>
+            <td>{{ payment.date }}</td>
+            <td>{{ payment.status }}</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-dark text-white">Recent Orders</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let order of orders">
+                    <td>{{ order.id }}</td>
+                    <td>{{ order.customer }}</td>
+                    <td>{{ order.total }}</td>
+                    <td>{{ order.status }}</td>
+                    <td>{{ order.date }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reports Section -->
+    <div class="row mt-4">
+      <div class="col-md-6 mb-4" *ngFor="let report of reports">
+        <div class="card shadow-sm">
+          <div class="card-header bg-dark text-white">{{ report.title }}</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th *ngFor="let column of report.columns">{{ column }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of report.data">
+                    <td *ngFor="let key of report.keys">{{ data[key] }}</td>  <!-- Dynamic key access -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,14 +1,17 @@
 <div class="container mt-5">
+  <a routerLink="/createemployee">
+    <button type="button" class="btn btn-outline-dark">Add New Employee</button>
+  </a>
   <table class="table table-dark table-striped table-hover table-bordered text-center">
     <thead class="table-secondary">
       <tr>
         <th scope="col">Employee ID</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
+        <th scope="col">Name</th>
         <th scope="col">Email</th>
         <th scope="col">Phone</th>
-        <th scope="col">Department</th>
-        <th scope="col">Job Title</th>
+        <th scope="col">Hire Date</th>
+
+        <th scope="col">Salary</th>
         <th scope="col">Status</th>
         <th scope="col">Action</th>
       </tr>
@@ -16,12 +19,11 @@
     <tbody>
       <tr *ngFor="let val of employeeList">
         <td>{{ val.employeeId }}</td>
-        <td>{{ val.firstName }}</td>
-        <td>{{ val.lastName }}</td>
+        <td>{{ val.name }}</td>
         <td>{{ val.email }}</td>
         <td>{{ val.phone }}</td>
-        <td>{{ val.department }}</td>
-        <td>{{ val.jobTitle }}</td>
+        <td>{{ val.hireDate }}</td>
+        <td>{{ val.salary }}</td>
         <td>{{ val.status }}</td>
 
         <td>
@@ -36,8 +38,6 @@
   </table>
 
   <div class="text-end">
-    <a routerLink="/createemployee">
-      <button type="button" class="btn btn-outline-dark">Add New Employee</button>
-    </a>
+
   </div>
 </div>

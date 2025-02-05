@@ -21,11 +21,11 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) {}
 
-  add(employee: EmployeeDTO): Observable<any> {
+  add(employee: any): Observable<any> {
     return this.http.post(this.baseUrl + '/create', employee);
   }
 
-  getAll(): Observable<EmployeeDTO[]> {
+  getAll(): Observable<any[]> {
     return this.http.get<EmployeeDTO[]>(this.baseUrl);
   }
 
@@ -37,7 +37,7 @@ export class EmployeeService {
     return this.http.delete(this.baseUrl + '/delete/' + employeeId);
   }
 
-  updateData(employee: EmployeeDTO): Observable<any> {
+  updateData(employee: any): Observable<any> {
     return this.http.put(this.baseUrl + '/update/' + employee.employeeId, employee);
   }
 }

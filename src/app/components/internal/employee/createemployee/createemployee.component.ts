@@ -9,7 +9,8 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./createemployee.component.scss']
 })
 export class CreateemployeeComponent implements OnInit {
-  constructor(private employeeService: EmployeeService, private router: Router) { }
+  constructor(private employeeService: EmployeeService,
+     private router: Router) { }
 
   ngOnInit(): void {
     // Initialization logic (if required)
@@ -18,18 +19,16 @@ export class CreateemployeeComponent implements OnInit {
   onSubmit() {
     this.employeeService.add(this.employeeForm.value).subscribe((res: any) => {
       console.log("Created successfully");
-      this.router.navigateByUrl('/employee-list'); // Adjust the route accordingly
+      this.router.navigateByUrl('/employeelist'); // Adjust the route accordingly
     });
   }
 
   employeeForm: FormGroup = new FormGroup({
-    employeeId: new FormControl(),
-    firstName: new FormControl(),
-    lastName: new FormControl(),
+    name: new FormControl(),
     email: new FormControl(),
     phone: new FormControl(),
-    department: new FormControl(),
-    jobTitle: new FormControl(),
+    hireDate: new FormControl(),
+    salary: new FormControl(),
     status: new FormControl('Active')  // Default value set to Active
   });
 }

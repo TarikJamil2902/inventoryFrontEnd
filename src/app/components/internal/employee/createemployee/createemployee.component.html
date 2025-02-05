@@ -6,23 +6,15 @@
               <h2 class="form-header" style="color:blanchedalmond;">Employee Entry Form</h2>
               <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
 
-                  <!-- Employee ID -->
-                  <div class="mb-3">
-                      <label for="employeeId" class="form-label" style="color:blanchedalmond;">Employee ID</label>
-                      <input type="number" class="form-control" id="employeeId" formControlName="employeeId" required>
-                  </div>
+
 
                   <!-- First Name -->
                   <div class="mb-3">
-                      <label for="firstName" class="form-label" style="color:blanchedalmond;">First Name</label>
-                      <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+                      <label for="name" class="form-label" style="color:blanchedalmond;">Name</label>
+                      <input type="text" class="form-control" id="name" formControlName="name" required>
                   </div>
 
-                  <!-- Last Name -->
-                  <div class="mb-3">
-                      <label for="lastName" class="form-label" style="color:blanchedalmond;">Last Name</label>
-                      <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
-                  </div>
+
 
                   <!-- Email -->
                   <div class="mb-3">
@@ -36,16 +28,16 @@
                       <input type="text" class="form-control" id="phone" formControlName="phone" required>
                   </div>
 
-                  <!-- Department -->
+                  <!-- Hire Date -->
                   <div class="mb-3">
-                      <label for="department" class="form-label" style="color:blanchedalmond;">Department</label>
-                      <input type="text" class="form-control" id="department" formControlName="department" required>
+                      <label for="hireDate" class="form-label" style="color:blanchedalmond;">Hire Date</label>
+                      <input type="date" class="form-control" id="hireDate" formControlName="hireDate" required>
                   </div>
 
-                  <!-- Job Title -->
+                  
                   <div class="mb-3">
-                      <label for="jobTitle" class="form-label" style="color:blanchedalmond;">Job Title</label>
-                      <input type="text" class="form-control" id="jobTitle" formControlName="jobTitle" required>
+                      <label for="salary" class="form-label" style="color:blanchedalmond;">Salary</label>
+                      <input type="text" class="form-control" id="salary" formControlName="salary" required>
                   </div>
 
                   <!-- Status -->

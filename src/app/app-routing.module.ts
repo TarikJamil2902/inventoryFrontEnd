@@ -61,6 +61,8 @@ import { CreateOrderComponent } from './components/internal/order/createorder/cr
 import { CreateOrderItemComponent } from './components/internal/orderitem/createorderitem/createorderitem.component';
 import { CreateProductComponent } from './components/internal/product/createproduct/createproduct.component';
 import { AdminLandingComponent } from './components/dashboard/admin-dashboard/admin-landing/admin-landing.component';
+import { ManagerLandingComponent } from './components/dashboard/manager-dashboard/manager-landing/manager-landing.component';
+import { EmployeeLandingComponent } from './components/dashboard/employee-dashboard/employee-landing/employee-landing.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -77,9 +79,7 @@ const routes: Routes = [
   { path: 'customerdashboard', component: CustomerDashboardComponent },
   { path: 'adminesidenav', component: AdminsidenavComponent },
   { path: 'managersidenav', component: ManagersidenavComponent },
-  { path: 'customerlist', component: CustomerlistComponent },
-  { path: 'createcustomer', component: CreatecustomerComponent },
-  { path: 'updatecustomer/:Id', component: UpdatecustomerComponent },
+
   { path: 'paymentlist', component: PaymentlistComponent },
   { path: 'createpayment', component: CreatePaymentComponent },
   { path: 'updatepayment/:Id', component: UpdatepaymentComponent },
@@ -92,6 +92,10 @@ const routes: Routes = [
   { path: 'createorderitem', component: CreateOrderItemComponent },
   { path: 'updateorderitem/:Id', component: UpdateorderitemComponent },
 
+  { path: 'customerlist', component: CustomerlistComponent },
+  { path: 'createcustomer', component: CreatecustomerComponent },
+  { path: 'updatecustomer/:Id', component: UpdatecustomerComponent },
+  
   { path: 'warehouselist', component: WarehouselistComponent },
   { path: 'createwarehouse', component: CreatewarehouseComponent },
   { path: 'updatewarehouse/:Id', component: UpdateWarehouseComponent },
@@ -144,8 +148,14 @@ const routes: Routes = [
   { path: 'createauditlog', component: CreateauditlogComponent },
   { path: 'updateauditlog/:Id', component: UpdateauditlogComponent },
 
-  { path: '', redirectTo: 'admin', pathMatch: 'full' }, 
+  { path: '', redirectTo: 'admin', pathMatch: 'full' },
   { path: 'admin', component: AdminLandingComponent },
+
+  { path: '', redirectTo: 'manager', pathMatch: 'full' },
+  { path: 'manager', component: ManagerLandingComponent },
+
+  { path: '', redirectTo: 'employee', pathMatch: 'full' },
+  { path: 'employee', component: EmployeeLandingComponent },
 
 ];
 

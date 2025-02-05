@@ -17,27 +17,40 @@ export class UpdatecustomerComponent implements OnInit {
   ) { }
 
   id!: any;
-  customerList! : CustomerDTO;
+  customerList! : any;
 
 
+  // ngOnInit(): void {
+  //   this.id= this.route.snapshot.params['Id']
+  //   console.log(this.id);
+  //   this.customerService.getById(this.id).subscribe((val: any) => {
+  //     this.customerList = val;
+  //     console.log(this.customerList);
+
+  //     this.customerForm.setValue(this.customerList)
+  //   })
+  // }
   ngOnInit(): void {
-    this.id= this.route.snapshot.params['Id']
-    console.log(this.id);
+    this.id = this.route.snapshot.params['Id'];
     this.customerService.getById(this.id).subscribe((val: any) => {
       this.customerList = val;
-      console.log(this.customerList);
 
-      this.customerForm.setValue(this.customerList)
-    })
+      // Convert roles to an array before updating the form
+      const roleArray = Array.isArray(val.role) ? val.role : [val.role];
+
+      this.customerForm.patchValue({
+        ...val,
+        role: roleArray
+      });
+    });
   }
-
 
 
   onSubmit() {
     this.customerService.updateData(this.customerForm.value).subscribe((res: any) => {
 
 
-      this.router.navigateByUrl('/categorylist')
+      this.router.navigateByUrl('/customerlist')
     })
   }
 

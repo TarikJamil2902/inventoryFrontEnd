@@ -13,7 +13,7 @@ httpClient: any;
 constructor(private employeeService:EmployeeService){}
 
 
-employeeList:EmployeeDTO[]=[];
+employeeList:any[]=[];
 
   ngOnInit(): void {
     this.employeeService.getAll().subscribe((res:any) => {

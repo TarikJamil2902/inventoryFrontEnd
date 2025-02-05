@@ -17,27 +17,50 @@ export class UpdateemployeeComponent implements OnInit {
   ) { }
 
   id!: any;
-  employeeList! : EmployeeDTO;
+  employeeList! : any;
 
 
+  // ngOnInit(): void {
+  //   this.id= this.route.snapshot.params['Id']
+  //   console.log(this.id);
+  //   this.employeeService.getById(this.id).subscribe((val: any) => {
+  //     this.employeeList = val;
+  //     console.log(this.employeeList);
+
+  //     this.employeeForm.setValue(this.employeeList)
+  //   })
+  // }
+
+  // ngOnInit(): void {
+  //   this.id= this.route.snapshot.params['Id']
+  //   console.log(this.id);
+  //   this.employeeService.getById(this.id).subscribe((val: any) => {
+  //     this.employeeList = val;
+  //     console.log(this.employeeList);
+
+  //     this.employeeForm.setValue(this.employeeList)
+  //   })
+  // }
   ngOnInit(): void {
-    this.id= this.route.snapshot.params['Id']
-    console.log(this.id);
+    this.id = this.route.snapshot.params['Id'];
     this.employeeService.getById(this.id).subscribe((val: any) => {
       this.employeeList = val;
-      console.log(this.employeeList);
 
-      this.employeeForm.setValue(this.employeeList)
-    })
+      // Convert roles to an array before updating the form
+      const roleArray = Array.isArray(val.role) ? val.role : [val.role];
+
+      this.employeeForm.patchValue({
+        ...val,
+        role: roleArray
+      });
+    });
   }
-
-
 
   onSubmit() {
     this.employeeService.updateData(this.employeeForm.value).subscribe((res: any) => {
 
 
-      this.router.navigateByUrl('/categorylist')
+      this.router.navigateByUrl('/employeelist');
     })
   }
 
@@ -45,12 +68,11 @@ export class UpdateemployeeComponent implements OnInit {
 
   employeeForm: FormGroup = new FormGroup({
     employeeId: new FormControl(),
-    firstName: new FormControl(),
-    lastName: new FormControl(),
+    name: new FormControl(),
     email: new FormControl(),
     phone: new FormControl(),
-    department: new FormControl(),
-    jobTitle: new FormControl(),
+    hireDate: new FormControl(),
+    salary: new FormControl(),
     status: new FormControl()
   });
 

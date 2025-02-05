@@ -10,13 +10,10 @@
             <input type="number" class="form-control" id="employeeId" formControlName="employeeId" required>
           </div>
           <div class="mb-3">
-            <label for="firstName" class="form-label" style="color:blanchedalmond;">First Name</label>
-            <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+            <label for="name" class="form-label" style="color:blanchedalmond;">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" required>
           </div>
-          <div class="mb-3">
-            <label for="lastName" class="form-label" style="color:blanchedalmond;">Last Name</label>
-            <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
-          </div>
+
           <div class="mb-3">
             <label for="email" class="form-label" style="color:blanchedalmond;">Email</label>
             <input type="email" class="form-control" id="email" formControlName="email" required>
@@ -25,18 +22,25 @@
             <label for="phone" class="form-label" style="color:blanchedalmond;">Phone</label>
             <input type="text" class="form-control" id="phone" formControlName="phone" required>
           </div>
+
+          
           <div class="mb-3">
-            <label for="department" class="form-label" style="color:blanchedalmond;">Department</label>
-            <input type="text" class="form-control" id="department" formControlName="department" required>
+            <label for="hireDate" class="form-label" style="color:blanchedalmond;">Hire Date</label>
+            <input type="date" class="form-control" id="hireDate" formControlName="hireDate" required>
           </div>
           <div class="mb-3">
-            <label for="jobTitle" class="form-label" style="color:blanchedalmond;">Job Title</label>
-            <input type="text" class="form-control" id="jobTitle" formControlName="jobTitle" required>
-          </div>
-          <div class="mb-3">
+            <label for="salary" class="form-label" style="color:blanchedalmond;">Salary</label>
+            <input type="number" class="form-control" id="salary" formControlName="salary" required>
+        </div>
+
+        <!-- Status -->
+        <div class="mb-3">
             <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
-            <input type="text" class="form-control" id="status" formControlName="status" required>
-          </div>
+            <select class="form-control" id="status" formControlName="status" required>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+        </div>
           <!-- Submit and Reset Buttons -->
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
