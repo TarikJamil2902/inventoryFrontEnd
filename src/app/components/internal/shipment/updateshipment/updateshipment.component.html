@@ -3,51 +3,51 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="form-container">
-              <h2 class="form-header" style="color:blanchedalmond;">Update Shipment</h2>
+              <h2 class="form-header" >Update Shipment</h2>
               <form [formGroup]="shipmentForm" (ngSubmit)="onSubmit()">
 
                 <div class="mb-3">
-                  <label for="id" class="form-label" style="color:blanchedalmond;">Shipment ID</label>
+                  <label for="id" class="form-label" >Shipment ID</label>
                   <input type="number" class="form-control" id="id" formControlName="id" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="orderId" class="form-label" style="color:blanchedalmond;">Order ID</label>
+                  <label for="orderId" class="form-label" >Order ID</label>
                   <input type="number" class="form-control" id="orderId" formControlName="orderId" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="shippingDate" class="form-label" style="color:blanchedalmond;">Shipping Date</label>
+                  <label for="shippingDate" class="form-label" >Shipping Date</label>
                   <input type="date" class="form-control" id="shippingDate" formControlName="shippingDate" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="deliveryDate" class="form-label" style="color:blanchedalmond;">Delivery Date</label>
+                  <label for="deliveryDate" class="form-label" >Delivery Date</label>
                   <input type="date" class="form-control" id="deliveryDate" formControlName="deliveryDate" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="carrierName" class="form-label" style="color:blanchedalmond;">Carrier Name</label>
+                  <label for="carrierName" class="form-label" >Carrier Name</label>
                   <input type="text" class="form-control" id="carrierName" formControlName="carrierName" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="trackingNumber" class="form-label" style="color:blanchedalmond;">Tracking Number</label>
+                  <label for="trackingNumber" class="form-label" >Tracking Number</label>
                   <input type="text" class="form-control" id="trackingNumber" formControlName="trackingNumber" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="shipmentStatus" class="form-label" style="color:blanchedalmond;">Shipment Status</label>
+                  <label for="shipmentStatus" class="form-label" >Shipment Status</label>
                   <input type="text" class="form-control" id="shipmentStatus" formControlName="shipmentStatus" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="deliveryAddress" class="form-label" style="color:blanchedalmond;">Delivery Address</label>
+                  <label for="deliveryAddress" class="form-label" >Delivery Address</label>
                   <input type="text" class="form-control" id="deliveryAddress" formControlName="deliveryAddress" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="shippingCost" class="form-label" style="color:blanchedalmond;">Shipping Cost</label>
+                  <label for="shippingCost" class="form-label" >Shipping Cost</label>
                   <input type="number" class="form-control" id="shippingCost" formControlName="shippingCost" required>
                 </div>
 

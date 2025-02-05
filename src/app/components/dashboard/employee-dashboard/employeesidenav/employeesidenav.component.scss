@@ -1,60 +1,123 @@
 .sidebar {
   width: 250px;
-  height: 100vh;
-  background-color: #212529;
-  color: white;
+  background-color: #333;
+  color: #fff;
   position: fixed;
-  transition: width 0.3s;
-  overflow: hidden;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease;
+  overflow-y: auto;  // Make the sidebar scrollable vertically
+
+  &.collapsed {
+    width: 80px;
+  }
 
   .sidebar-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #343a40;
-  }
-
-  .toggle-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+    padding: 20px;
+    background-color: #222;
+    border-bottom: 1px solid #444;
+    h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .toggle-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
   }
 
   .menu-list {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
 
-    li {
-      padding: 15px;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      transition: background 0.3s;
-
+    .menu-item {
+      position: relative;
+      border-bottom: 1px solid #444;
       &:hover {
-        background-color: #495057;
+        background-color: #555;
       }
 
-      i {
-        margin-right: 10px;
+      .menu-link {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        cursor: pointer;
+
+        i {
+          margin-right: 10px;
+        }
+
+        span {
+          flex: 1;
+          display: block;
+        }
+      }
+
+      .submenu-list {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background-color: #444;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 200px;
+        z-index: 10;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+
+        li {
+          padding: 10px;
+          cursor: pointer;
+          &:hover {
+            background-color: #555;
+          }
+        }
+      }
+
+      &.active .submenu-list {
+        display: block;
       }
     }
   }
-}
 
-/* Collapsed Sidebar */
-.sidebar.collapsed {
-  width: 80px;
-
-  .menu-list li {
-    justify-content: center;
+  .collapsed .menu-item .submenu-list {
+    display: none;
   }
 
-  .menu-list li span {
-    display: none;
+  .menu-item:hover .submenu-list {
+    display: block;
+  }
+}
+
+/* Ensure the submenu is scrollable if it's too long */
+.submenu-list {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  z-index: 10;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  max-height: 300px; // Limit the height of the submenu
+  overflow-y: auto;  // Make the submenu scrollable
+
+  li {
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #555;
+    }
   }
 }

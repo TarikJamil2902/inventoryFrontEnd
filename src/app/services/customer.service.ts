@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export interface CustomerDTO {
+export interface Customer {
   customerId: number;
   firstName: string;
   lastName: string;
@@ -24,11 +24,13 @@ export class CustomerService {
   constructor(private http: HttpClient) {}
 
 
-  add(customer: any): Observable<any> {
+  add(customer: any){
     return this.http.post(this.baseUrl + '/create', customer);
   }
-  getAll(): Observable<any[]> {
-    return this.http.get<CustomerDTO[]>(this.baseUrl);
+
+
+  getAll() {
+    return this.http.get(this.baseUrl);
   }
 
   remove(customerId: number): Observable<any> {
@@ -36,7 +38,7 @@ export class CustomerService {
   }
 
   getById(customerId: number): Observable<any> {
-    return this.http.get<CustomerDTO>(this.baseUrl + '/' + customerId);
+    return this.http.get(this.baseUrl + '/' + customerId);
   }
 
   updateData(customer: any): Observable<any> {

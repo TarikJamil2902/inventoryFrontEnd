@@ -3,46 +3,46 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="form-container">
-              <h2 class="form-header" style="color:blanchedalmond;">Update Tax</h2>
+              <h2 class="form-header" >Update Tax</h2>
               <form [formGroup]="taxForm" (ngSubmit)="onSubmit()">
 
                 <div class="mb-3">
-                  <label for="taxId" class="form-label" style="color:blanchedalmond;">Tax ID</label>
+                  <label for="taxId" class="form-label" >Tax ID</label>
                   <input type="number" class="form-control" id="taxId" formControlName="taxId" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="taxType" class="form-label" style="color:blanchedalmond;">Tax Type</label>
+                  <label for="taxType" class="form-label" >Tax Type</label>
                   <input type="text" class="form-control" id="taxType" formControlName="taxType" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="rate" class="form-label" style="color:blanchedalmond;">Tax Rate (%)</label>
+                  <label for="rate" class="form-label" >Tax Rate (%)</label>
                   <input type="number" class="form-control" id="rate" formControlName="rate" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="description" class="form-label" style="color:blanchedalmond;">Description</label>
+                  <label for="description" class="form-label" >Description</label>
                   <input type="text" class="form-control" id="description" formControlName="description" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="taxCategory" class="form-label" style="color:blanchedalmond;">Tax Category</label>
+                  <label for="taxCategory" class="form-label" >Tax Category</label>
                   <input type="text" class="form-control" id="taxCategory" formControlName="taxCategory" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="isActive" class="form-label" style="color:blanchedalmond;">Is Active</label>
+                  <label for="isActive" class="form-label" >Is Active</label>
                   <input type="checkbox" class="form-control" id="isActive" formControlName="isActive">
                 </div>
 
                 <div class="mb-3">
-                  <label for="effectiveFrom" class="form-label" style="color:blanchedalmond;">Effective From</label>
+                  <label for="effectiveFrom" class="form-label" >Effective From</label>
                   <input type="date" class="form-control" id="effectiveFrom" formControlName="effectiveFrom" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="effectiveTill" class="form-label" style="color:blanchedalmond;">Effective Till</label>
+                  <label for="effectiveTill" class="form-label" >Effective Till</label>
                   <input type="date" class="form-control" id="effectiveTill" formControlName="effectiveTill" required>
                 </div>
 

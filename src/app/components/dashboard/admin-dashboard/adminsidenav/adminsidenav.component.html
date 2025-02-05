@@ -13,13 +13,6 @@
         <i class="{{ item.icon }}"></i>
         <span *ngIf="!isCollapsed">{{ item.label }}</span>
       </div>
-
-      <!-- Submenu -->
-      <ul *ngIf="item.subItems?.length && !isCollapsed && item.showSubmenu" class="submenu-list">
-        <li *ngFor="let subItem of item.subItems" (click)="navigate(subItem.link)">
-          {{ subItem.label }}
-        </li>
-      </ul>
     </li>
   </ul>
 </nav>

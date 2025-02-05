@@ -26,23 +26,23 @@ export class OrderService {
 
   constructor(private http: HttpClient) {}
 
-  add(order: OrderDTO): Observable<any> {
+  add(order: any){
     return this.http.post(this.baseUrl + '/create', order);
   }
 
-  getAll(): Observable<OrderDTO[]> {
-    return this.http.get<OrderDTO[]>(this.baseUrl);
+  getAll(){
+    return this.http.get(this.baseUrl);
   }
 
-  getById(orderId: number): Observable<OrderDTO> {
-    return this.http.get<OrderDTO>(this.baseUrl + '/' + orderId);
+  getById(orderId: any) {
+    return this.http.get(this.baseUrl + '/' + orderId);
   }
 
-  remove(orderId: number): Observable<any> {
+  remove(orderId: any){
     return this.http.delete(this.baseUrl + '/delete/' + orderId);
   }
 
-  updateData(order: OrderDTO): Observable<any> {
+  updateData(order: OrderDTO) {
     return this.http.put(this.baseUrl + '/update/' + order.orderId, order);
   }
 }

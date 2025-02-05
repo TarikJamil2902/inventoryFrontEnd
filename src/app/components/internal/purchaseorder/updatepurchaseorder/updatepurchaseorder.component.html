@@ -3,46 +3,46 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="form-container">
-              <h2 class="form-header" style="color:blanchedalmond;">Update Purchase Order</h2>
+              <h2 class="form-header" >Update Purchase Order</h2>
               <form [formGroup]="purchaseOrderForm" (ngSubmit)="onSubmit()">
 
                 <div class="mb-3">
-                  <label for="purchaseOrderId" class="form-label" style="color:blanchedalmond;">Purchase Order ID</label>
+                  <label for="purchaseOrderId" class="form-label" >Purchase Order ID</label>
                   <input type="number" class="form-control" id="purchaseOrderId" formControlName="purchaseOrderId" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="supplierId" class="form-label" style="color:blanchedalmond;">Supplier ID</label>
+                  <label for="supplierId" class="form-label" >Supplier ID</label>
                   <input type="number" class="form-control" id="supplierId" formControlName="supplierId" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="purchaseOrderItemIds" class="form-label" style="color:blanchedalmond;">Purchase Order Item IDs</label>
+                  <label for="purchaseOrderItemIds" class="form-label" >Purchase Order Item IDs</label>
                   <input type="text" class="form-control" id="purchaseOrderItemIds" formControlName="purchaseOrderItemIds" required placeholder="Comma-separated list of Item IDs">
                 </div>
 
                 <div class="mb-3">
-                  <label for="orderDate" class="form-label" style="color:blanchedalmond;">Order Date</label>
+                  <label for="orderDate" class="form-label" >Order Date</label>
                   <input type="date" class="form-control" id="orderDate" formControlName="orderDate" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="deliveryDate" class="form-label" style="color:blanchedalmond;">Delivery Date</label>
+                  <label for="deliveryDate" class="form-label" >Delivery Date</label>
                   <input type="date" class="form-control" id="deliveryDate" formControlName="deliveryDate" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                  <label for="status" class="form-label" >Status</label>
                   <input type="text" class="form-control" id="status" formControlName="status" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="totalAmount" class="form-label" style="color:blanchedalmond;">Total Amount</label>
+                  <label for="totalAmount" class="form-label" >Total Amount</label>
                   <input type="number" class="form-control" id="totalAmount" formControlName="totalAmount" required>
                 </div>
 
                 <div class="mb-3">
-                  <label for="paymentTerms" class="form-label" style="color:blanchedalmond;">Payment Terms</label>
+                  <label for="paymentTerms" class="form-label" >Payment Terms</label>
                   <input type="text" class="form-control" id="paymentTerms" formControlName="paymentTerms" required>
                 </div>
 

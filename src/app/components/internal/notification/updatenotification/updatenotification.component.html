@@ -3,34 +3,34 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="form-container">
-              <h2 class="form-header" style="color:blanchedalmond;">Update Notification</h2>
+              <h2 class="form-header" >Update Notification</h2>
               <form [formGroup]="notificationForm" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
-                  <label for="notificationId" class="form-label" style="color:blanchedalmond;">Notification ID</label>
+                  <label for="notificationId" class="form-label" >Notification ID</label>
                   <input type="number" class="form-control" id="notificationId" formControlName="notificationId" required>
               </div>
                   <div class="mb-3">
-                      <label for="message" class="form-label" style="color:blanchedalmond;">Message</label>
+                      <label for="message" class="form-label" >Message</label>
                       <input type="text" class="form-control" id="message" formControlName="message" required>
                   </div>
 
                   <div class="mb-3">
-                      <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                      <label for="status" class="form-label" >Status</label>
                       <input type="text" class="form-control" id="status" formControlName="status" required>
                   </div>
 
                   <div class="mb-3">
-                    <label for="createdAt" class="form-label" style="color:blanchedalmond;">Created At</label>
+                    <label for="createdAt" class="form-label" >Created At</label>
                     <input type="datetime-local" class="form-control" id="createdAt" formControlName="createdAt" required>
                   </div>
 
                   <div class="mb-3">
-                    <label for="notificationType" class="form-label" style="color:blanchedalmond;">Notification Type</label>
+                    <label for="notificationType" class="form-label" >Notification Type</label>
                     <input type="text" class="form-control" id="notificationType" formControlName="notificationType" required>
                   </div>
 
                   <div class="mb-3">
-                    <label for="userName" class="form-label" style="color:blanchedalmond;">User Name</label>
+                    <label for="userName" class="form-label" >User Name</label>
                     <input type="text" class="form-control" id="userName" formControlName="userName" required>
                   </div>
 

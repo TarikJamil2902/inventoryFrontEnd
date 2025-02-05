@@ -3,24 +3,24 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="form-container">
-              <h2 class="form-header" style="color:blanchedalmond;">Update Form</h2>
+              <h2 class="form-header" >Update Form</h2>
               <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
-                  <label for="categoryId" class="form-label" style="color:blanchedalmond;">ID</label>
+                  <label for="categoryId" class="form-label" >ID</label>
                   <input type="number" class="form-control" id="categoryId" formControlName="categoryId" required>
               </div>
                   <div class="mb-3">
-                      <label for="categoryName" class="form-label" style="color:blanchedalmond;">Full Name</label>
+                      <label for="categoryName" class="form-label" >Full Name</label>
                       <input type="text" class="form-control" id="categoryName" formControlName="categoryName" required>
                   </div>
 
 
                   <div class="mb-3">
-                      <label for="description" class="form-label"style="color:blanchedalmond;">Description</label>
+                      <label for="description" class="form-label">Description</label>
                       <input type="text" class="form-control" id="description" formControlName="description" min="5" required>
                   </div>
                   <div class="mb-3">
-                    <label for="status" class="form-label"style="color:blanchedalmond;">Status</label>
+                    <label for="status" class="form-label">Status</label>
                     <input type="text" class="form-control" id="status" formControlName="status" min="5" required>
                 </div>
 

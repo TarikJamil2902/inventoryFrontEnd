@@ -3,14 +3,14 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="form-container">
-              <h2 class="form-header" style="color:blanchedalmond;">Employee Entry Form</h2>
+              <h2 class="form-header" >Employee Entry Form</h2>
               <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
 
 
 
                   <!-- First Name -->
                   <div class="mb-3">
-                      <label for="name" class="form-label" style="color:blanchedalmond;">Name</label>
+                      <label for="name" class="form-label" >Name</label>
                       <input type="text" class="form-control" id="name" formControlName="name" required>
                   </div>
 
@@ -18,31 +18,31 @@
 
                   <!-- Email -->
                   <div class="mb-3">
-                      <label for="email" class="form-label" style="color:blanchedalmond;">Email</label>
+                      <label for="email" class="form-label" >Email</label>
                       <input type="email" class="form-control" id="email" formControlName="email" required>
                   </div>
 
                   <!-- Phone -->
                   <div class="mb-3">
-                      <label for="phone" class="form-label" style="color:blanchedalmond;">Phone</label>
+                      <label for="phone" class="form-label" >Phone</label>
                       <input type="text" class="form-control" id="phone" formControlName="phone" required>
                   </div>
 
                   <!-- Hire Date -->
                   <div class="mb-3">
-                      <label for="hireDate" class="form-label" style="color:blanchedalmond;">Hire Date</label>
+                      <label for="hireDate" class="form-label" >Hire Date</label>
                       <input type="date" class="form-control" id="hireDate" formControlName="hireDate" required>
                   </div>
 
-                  
+
                   <div class="mb-3">
-                      <label for="salary" class="form-label" style="color:blanchedalmond;">Salary</label>
+                      <label for="salary" class="form-label" >Salary</label>
                       <input type="text" class="form-control" id="salary" formControlName="salary" required>
                   </div>
 
                   <!-- Status -->
                   <div class="mb-3">
-                      <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                      <label for="status" class="form-label" >Status</label>
                       <select class="form-control" id="status" formControlName="status" required>
                           <option value="Active">Active</option>
                           <option value="Inactive">Inactive</option>

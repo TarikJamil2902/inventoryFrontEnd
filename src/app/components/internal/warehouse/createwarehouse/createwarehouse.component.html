@@ -3,42 +3,42 @@
   <div class="row justify-content-center">
       <div class="col-md-8">
           <div class="form-container">
-              <h2 class="form-header" style="color:blanchedalmond;">Entry Form</h2>
+              <h2 class="form-header" >Entry Form</h2>
               <form [formGroup]="warehouseForm" (ngSubmit)="onSubmit()">
 
                   <!-- Warehouse ID -->
                   <div class="mb-3">
-                      <label for="warehouseId" class="form-label" style="color:blanchedalmond;">Warehouse ID</label>
+                      <label for="warehouseId" class="form-label" >Warehouse ID</label>
                       <input type="number" class="form-control" id="warehouseId" formControlName="warehouseId" required>
                   </div>
 
                   <!-- Warehouse Name -->
                   <div class="mb-3">
-                      <label for="warehouseName" class="form-label" style="color:blanchedalmond;">Warehouse Name</label>
+                      <label for="warehouseName" class="form-label" >Warehouse Name</label>
                       <input type="text" class="form-control" id="warehouseName" formControlName="warehouseName" required>
                   </div>
 
                   <!-- Warehouse Address -->
                   <div class="mb-3">
-                      <label for="warehouseAddress" class="form-label" style="color:blanchedalmond;">Warehouse Address</label>
+                      <label for="warehouseAddress" class="form-label" >Warehouse Address</label>
                       <input type="text" class="form-control" id="warehouseAddress" formControlName="warehouseAddress" required>
                   </div>
 
                   <!-- Capacity -->
                   <div class="mb-3">
-                      <label for="capacity" class="form-label" style="color:blanchedalmond;">Capacity</label>
+                      <label for="capacity" class="form-label" >Capacity</label>
                       <input type="number" class="form-control" id="capacity" formControlName="capacity" required>
                   </div>
 
                   <!-- Contact Information -->
                   <div class="mb-3">
-                      <label for="contactInfo" class="form-label" style="color:blanchedalmond;">Contact Information</label>
+                      <label for="contactInfo" class="form-label" >Contact Information</label>
                       <input type="text" class="form-control" id="contactInfo" formControlName="contactInfo" required>
                   </div>
 
                   <!-- Status -->
                   <div class="mb-3">
-                      <label for="status" class="form-label" style="color:blanchedalmond;">Status</label>
+                      <label for="status" class="form-label" >Status</label>
                       <select class="form-control" id="status" formControlName="status" required>
                           <option value="Active">Active</option>
                           <option value="Inactive">Inactive</option>
@@ -47,7 +47,7 @@
 
                   <!-- Manager ID -->
                   <div class="mb-3">
-                      <label for="managerId" class="form-label" style="color:blanchedalmond;">Manager ID</label>
+                      <label for="managerId" class="form-label" >Manager ID</label>
                       <input type="number" class="form-control" id="managerId" formControlName="managerId" required>
                   </div>
 

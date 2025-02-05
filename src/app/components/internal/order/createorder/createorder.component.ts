@@ -19,12 +19,12 @@ export class CreateOrderComponent implements OnInit {
   onSubmit() {
     this.orderService.add(this.orderForm.value).subscribe((res: any) => {
       console.log("Order created successfully");
-      this.router.navigateByUrl('/order-list'); // Adjust the route as needed
+      this.router.navigateByUrl('/orderlist'); // Adjust the route as needed
     });
   }
 
   orderForm: FormGroup = new FormGroup({
-    orderId: new FormControl(),
+
     customerName: new FormControl(),
     customerContact: new FormControl(),
     orderItemIds: new FormControl([]),  // Default as an empty array

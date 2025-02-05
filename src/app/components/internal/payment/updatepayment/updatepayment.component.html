@@ -3,38 +3,38 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="form-container">
-        <h2 class="form-header" style="color:blanchedalmond;">Update Payment</h2>
+        <h2 class="form-header" >Update Payment</h2>
         <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
           <div class="mb-3">
-            <label for="orderId" class="form-label" style="color:blanchedalmond;">Order ID</label>
+            <label for="orderId" class="form-label" >Order ID</label>
             <input type="number" class="form-control" id="orderId" formControlName="orderId" required>
           </div>
           <div class="mb-3">
-            <label for="customerId" class="form-label" style="color:blanchedalmond;">Customer ID</label>
+            <label for="customerId" class="form-label" >Customer ID</label>
             <input type="number" class="form-control" id="customerId" formControlName="customerId" required>
           </div>
           <div class="mb-3">
-            <label for="amount" class="form-label" style="color:blanchedalmond;">Amount</label>
+            <label for="amount" class="form-label" >Amount</label>
             <input type="number" class="form-control" id="amount" formControlName="amount" required>
           </div>
           <div class="mb-3">
-            <label for="paymentMethod" class="form-label" style="color:blanchedalmond;">Payment Method</label>
+            <label for="paymentMethod" class="form-label" >Payment Method</label>
             <input type="text" class="form-control" id="paymentMethod" formControlName="paymentMethod" required>
           </div>
           <div class="mb-3">
-            <label for="paymentStatus" class="form-label" style="color:blanchedalmond;">Payment Status</label>
+            <label for="paymentStatus" class="form-label" >Payment Status</label>
             <input type="text" class="form-control" id="paymentStatus" formControlName="paymentStatus" required>
           </div>
           <div class="mb-3">
-            <label for="currency" class="form-label" style="color:blanchedalmond;">Currency</label>
+            <label for="currency" class="form-label" >Currency</label>
             <input type="text" class="form-control" id="currency" formControlName="currency" required>
           </div>
           <div class="mb-3">
-            <label for="transactionId" class="form-label" style="color:blanchedalmond;">Transaction ID</label>
+            <label for="transactionId" class="form-label" >Transaction ID</label>
             <input type="text" class="form-control" id="transactionId" formControlName="transactionId" required>
           </div>
           <div class="mb-3">
-            <label for="paymentDate" class="form-label" style="color:blanchedalmond;">Payment Date</label>
+            <label for="paymentDate" class="form-label" >Payment Date</label>
             <input type="date" class="form-control" id="paymentDate" formControlName="paymentDate" required>
           </div>
 

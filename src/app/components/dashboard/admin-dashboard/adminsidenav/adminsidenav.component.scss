@@ -4,7 +4,10 @@
   color: #fff;
   position: fixed;
   height: 100%;
+  top: 0;
+  left: 0;
   transition: width 0.3s ease;
+  overflow-y: auto;  // Make the sidebar scrollable vertically
 
   &.collapsed {
     width: 80px;
@@ -94,6 +97,7 @@
   }
 }
 
+/* Ensure the submenu is scrollable if it's too long */
 .submenu-list {
   display: none;
   position: absolute;
@@ -106,6 +110,8 @@
   z-index: 10;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  max-height: 300px; // Limit the height of the submenu
+  overflow-y: auto;  // Make the submenu scrollable
 
   li {
     padding: 10px;
@@ -115,4 +121,3 @@
     }
   }
 }
-

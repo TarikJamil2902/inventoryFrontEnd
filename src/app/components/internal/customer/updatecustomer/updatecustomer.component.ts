@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CustomerDTO, CustomerService } from 'src/app/services/customer.service';
+import { Customer, CustomerService } from 'src/app/services/customer.service';
 
 @Component({
   selector: 'app-updatecustomer',

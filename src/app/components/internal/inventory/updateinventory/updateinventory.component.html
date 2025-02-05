@@ -3,30 +3,30 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="form-container">
-        <h2 class="form-header" style="color:blanchedalmond;">Update Form</h2>
+        <h2 class="form-header" >Update Form</h2>
         <form [formGroup]="inventoryForm" (ngSubmit)="onSubmit()">
           <div class="mb-3">
-            <label for="inventoryId" class="form-label" style="color:blanchedalmond;">Inventory ID</label>
+            <label for="inventoryId" class="form-label" >Inventory ID</label>
             <input type="number" class="form-control" id="inventoryId" formControlName="inventoryId" required>
           </div>
           <div class="mb-3">
-            <label for="productId" class="form-label" style="color:blanchedalmond;">Product ID</label>
+            <label for="productId" class="form-label" >Product ID</label>
             <input type="number" class="form-control" id="productId" formControlName="productId" required>
           </div>
           <div class="mb-3">
-            <label for="warehouseId" class="form-label" style="color:blanchedalmond;">Warehouse ID</label>
+            <label for="warehouseId" class="form-label" >Warehouse ID</label>
             <input type="number" class="form-control" id="warehouseId" formControlName="warehouseId" required>
           </div>
           <div class="mb-3">
-            <label for="quantityOnHand" class="form-label" style="color:blanchedalmond;">Quantity On Hand</label>
+            <label for="quantityOnHand" class="form-label" >Quantity On Hand</label>
             <input type="number" class="form-control" id="quantityOnHand" formControlName="quantityOnHand" required>
           </div>
           <div class="mb-3">
-            <label for="quantityAllocated" class="form-label" style="color:blanchedalmond;">Quantity Allocated</label>
+            <label for="quantityAllocated" class="form-label" >Quantity Allocated</label>
             <input type="number" class="form-control" id="quantityAllocated" formControlName="quantityAllocated" required>
           </div>
           <div class="mb-3">
-            <label for="quantityAvailable" class="form-label" style="color:blanchedalmond;">Quantity Available</label>
+            <label for="quantityAvailable" class="form-label" >Quantity Available</label>
             <input type="number" class="form-control" id="quantityAvailable" formControlName="quantityAvailable" required>
           </div>
           <!-- Submit and Reset Buttons -->
