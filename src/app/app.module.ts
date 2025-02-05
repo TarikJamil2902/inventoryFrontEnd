@@ -81,6 +81,7 @@ import { UpdateWarehouseComponent } from './components/internal/warehouse/update
 import { CreateNotificationComponent } from './components/internal/notification/createnotification/createnotification.component';
 import { CreateOrderComponent } from './components/internal/order/createorder/createorder.component';
 import { CreateProductComponent } from './components/internal/product/createproduct/createproduct.component';
+import { AdminLandingComponent } from './components/dashboard/admin-dashboard/admin-landing/admin-landing.component';
 
 @NgModule({
   declarations: [
@@ -159,14 +160,16 @@ import { CreateProductComponent } from './components/internal/product/createprod
     CreatetaxComponent,
     WarehouselistComponent,
 
-    CreatewarehouseComponent // Added
+    CreatewarehouseComponent,
+      AdminLandingComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

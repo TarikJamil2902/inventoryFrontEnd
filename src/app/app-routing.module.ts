@@ -60,6 +60,7 @@ import { CreatePaymentComponent } from './components/internal/payment/createpaym
 import { CreateOrderComponent } from './components/internal/order/createorder/createorder.component';
 import { CreateOrderItemComponent } from './components/internal/orderitem/createorderitem/createorderitem.component';
 import { CreateProductComponent } from './components/internal/product/createproduct/createproduct.component';
+import { AdminLandingComponent } from './components/dashboard/admin-dashboard/admin-landing/admin-landing.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -142,6 +143,9 @@ const routes: Routes = [
   { path: 'auditloglist', component: SupplierlistComponent },
   { path: 'createauditlog', component: CreateauditlogComponent },
   { path: 'updateauditlog/:Id', component: UpdateauditlogComponent },
+
+  { path: '', redirectTo: 'admin', pathMatch: 'full' }, 
+  { path: 'admin', component: AdminLandingComponent },
 
 ];
 
