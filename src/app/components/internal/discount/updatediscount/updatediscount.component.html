@@ -21,30 +21,42 @@
           </div>
 
           <div class="mb-3">
-            <label for="percentage" class="form-label" style="color: blanchedalmond;">Percentage</label>
-            <input type="number" class="form-control" id="percentage" formControlName="percentage" required>
-          </div>
+            <label for="discountType" class="form-label" >Discount Type</label>
+            <select class="form-control" id="discountType" formControlName="discountType" required>
+              <option value="percentage">Percentage</option>
+              <option value="fixed amount">Fixed Amount</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="amount" class="form-label" >Discount Amount</label>
+          <input type="number" class="form-control" id="amount" formControlName="amount" required>
+      </div>
+        <!-- Start Date -->
+        <div class="mb-3">
+            <label for="validFrom" class="form-label" >Start Date</label>
+            <input type="date" class="form-control" id="startDate" formControlName="validFrom" required>
+        </div>
 
-          <div class="mb-3">
-            <label for="startDate" class="form-label" style="color: blanchedalmond;">Start Date</label>
-            <input type="date" class="form-control" id="startDate" formControlName="startDate" required>
-          </div>
+        <!-- End Date -->
+        <div class="mb-3">
+            <label for="validUntil" class="form-label" >End Date</label>
+            <input type="date" class="form-control" id="validUntil" formControlName="validUntil" required>
+        </div>
 
-          <div class="mb-3">
-            <label for="endDate" class="form-label" style="color: blanchedalmond;">End Date</label>
-            <input type="date" class="form-control" id="endDate" formControlName="endDate" required>
-          </div>
+        <!-- Status -->
+        <div class="mb-3">
+            <label for="status" class="form-label" >Status</label>
+            <select class="form-control" id="status" formControlName="status" required>
+                <option value="Active">Active</option>
+                <option value="Expired">Expired</option>
+            </select>
+        </div>
 
-          <div class="mb-3">
-            <label for="status" class="form-label" style="color: blanchedalmond;">Status</label>
-            <input type="text" class="form-control" id="status" formControlName="status" required>
-          </div>
-
-          <!-- Submit and Reset Buttons -->
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <!-- Submit and Reset Buttons -->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
             <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
+        </div>
         </form>
       </div>
     </div>

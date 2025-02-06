@@ -5,7 +5,8 @@
         <th scope="col">Discount ID</th>
         <th scope="col">Discount Code</th>
         <th scope="col">Description</th>
-        <th scope="col">Percentage</th>
+        <th scope="col">Discount Type</th>
+        <th scope="col">Amount</th>
         <th scope="col">Start Date</th>
         <th scope="col">End Date</th>
         <th scope="col">Status</th>
@@ -17,9 +18,11 @@
         <td>{{ val.discountId }}</td>
         <td>{{ val.discountCode }}</td>
         <td>{{ val.description }}</td>
-        <td>{{ val.percentage }}%</td>
-        <td>{{ val.startDate }}</td>
-        <td>{{ val.endDate }}</td>
+        <td>{{ val.discountType }}</td>
+        <td>{{ val.amount }}</td>
+        
+        <td>{{ val.validFrom }}</td>
+        <td>{{ val.validUntil }}</td>
         <td>{{ val.status }}</td>
 
         <td>

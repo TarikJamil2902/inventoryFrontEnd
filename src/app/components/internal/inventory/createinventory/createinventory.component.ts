@@ -19,7 +19,7 @@ export class CreateinventoryComponent implements OnInit {
   onSubmit() {
     this.inventoryService.add(this.inventoryForm.value).subscribe((res: any) => {
       console.log("Created successfully");
-      this.router.navigateByUrl('/inventory-list'); // Adjust this route as needed
+      this.router.navigateByUrl('/inventorylist'); // Adjust this route as needed
     });
   }
 
@@ -30,6 +30,6 @@ export class CreateinventoryComponent implements OnInit {
     quantityOnHand: new FormControl(),
     quantityAllocated: new FormControl(),
     quantityAvailable: new FormControl(),
-    status: new FormControl('Active')  // Default value set to Active
+   
   });
 }

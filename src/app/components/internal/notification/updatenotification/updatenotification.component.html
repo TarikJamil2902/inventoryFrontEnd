@@ -19,20 +19,19 @@
                       <input type="text" class="form-control" id="status" formControlName="status" required>
                   </div>
 
-                  <div class="mb-3">
-                    <label for="createdAt" class="form-label" >Created At</label>
-                    <input type="datetime-local" class="form-control" id="createdAt" formControlName="createdAt" required>
-                  </div>
+
 
                   <div class="mb-3">
                     <label for="notificationType" class="form-label" >Notification Type</label>
-                    <input type="text" class="form-control" id="notificationType" formControlName="notificationType" required>
-                  </div>
+                    <select class="form-control" id="status" formControlName="notificationType" required>
+                      <option value="Low Stock">Low Stock</option>
+                      <option value="Out of Stock">Out Of Stock</option>
 
-                  <div class="mb-3">
-                    <label for="userName" class="form-label" >User Name</label>
-                    <input type="text" class="form-control" id="userName" formControlName="userName" required>
-                  </div>
+
+                  </select>
+                </div>
+
+                  
 
                   <!-- Submit and Reset Buttons -->
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">

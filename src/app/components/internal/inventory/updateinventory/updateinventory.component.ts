@@ -18,8 +18,8 @@ export class UpdateinventoryComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  id!: number;
-  inventoryData!: InventoryDTO;
+  id!: any;
+  inventoryData!: any;
 
   inventoryForm: FormGroup = new FormGroup({
     inventoryId: new FormControl(),

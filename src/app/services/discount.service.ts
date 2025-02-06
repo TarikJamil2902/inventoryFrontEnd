@@ -6,9 +6,10 @@ export interface DiscountDTO {
   discountId: number;
   discountCode: string;
   description: string;
-  percentage: number;
-  startDate: string;
-  endDate: string;
+  discountType: string;
+  amount: number;
+  validFrom: Date;
+  validUntil: Date;
   status: string;
 }
 

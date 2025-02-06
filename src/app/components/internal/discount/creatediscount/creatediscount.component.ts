@@ -20,9 +20,10 @@ export class CreatediscountComponent implements OnInit {
     discountId: new FormControl(),
     discountCode: new FormControl(),
     description: new FormControl(),
-    percentage: new FormControl(),
-    startDate: new FormControl(),
-    endDate: new FormControl(),
+    discountType: new FormControl(),
+    amount: new FormControl(),
+    validFrom: new FormControl(),
+    validUntil: new FormControl(),
     status: new FormControl('Active') // Default to 'Active'
   });
 
@@ -33,7 +34,7 @@ export class CreatediscountComponent implements OnInit {
   onSubmit() {
     // Submit the form data to create a new discount
     this.discountService.add(this.discountForm.value).subscribe((res: any) => {
-      this.router.navigateByUrl('/discount-list'); // Redirect after successful submission
+      this.router.navigateByUrl('/discountlist'); // Redirect after successful submission
     });
   }
 }

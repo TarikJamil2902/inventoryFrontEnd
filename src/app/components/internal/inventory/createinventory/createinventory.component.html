@@ -6,11 +6,7 @@
               <h2 class="form-header" >Entry Form</h2>
               <form [formGroup]="inventoryForm" (ngSubmit)="onSubmit()">
 
-                  <!-- Inventory ID -->
-                  <div class="mb-3">
-                      <label for="inventoryId" class="form-label" >Inventory ID</label>
-                      <input type="number" class="form-control" id="inventoryId" formControlName="inventoryId" required>
-                  </div>
+
 
                   <!-- Product ID -->
                   <div class="mb-3">
@@ -42,14 +38,7 @@
                       <input type="number" class="form-control" id="quantityAvailable" formControlName="quantityAvailable" required>
                   </div>
 
-                  <!-- Status -->
-                  <div class="mb-3">
-                      <label for="status" class="form-label" >Status</label>
-                      <select class="form-control" id="status" formControlName="status" required>
-                          <option value="Active">Active</option>
-                          <option value="Inactive">Inactive</option>
-                      </select>
-                  </div>
+
 
                   <!-- Submit and Reset Buttons -->
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">

@@ -37,7 +37,7 @@ export class UpdatediscountComponent implements OnInit {
     this.discountService.updateData(this.discountForm.value).subscribe((res: any) => {
 
 
-      this.router.navigateByUrl('/categorylist')
+      this.router.navigateByUrl('/discountlist')
     })
   }
 
@@ -47,9 +47,10 @@ export class UpdatediscountComponent implements OnInit {
     discountId: new FormControl(),
     discountCode: new FormControl(),
     description: new FormControl(),
-    percentage: new FormControl(),
-    startDate: new FormControl(),
-    endDate: new FormControl(),
+    discountType: new FormControl(),
+    amount: new FormControl(),
+    validFrom: new FormControl(),
+    validUntil: new FormControl(),
     status: new FormControl()
   });
 

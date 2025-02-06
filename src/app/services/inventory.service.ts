@@ -19,23 +19,23 @@ export class InventoryService {
 
   constructor(private http: HttpClient) {}
 
-  add(inventory: InventoryDTO): Observable<any> {
+  add(inventory: any) {
     return this.http.post(this.baseUrl + '/create', inventory);
   }
 
-  getAll(): Observable<InventoryDTO[]> {
-    return this.http.get<InventoryDTO[]>(this.baseUrl);
+  getAll() {
+    return this.http.get(this.baseUrl);
   }
 
-  getById(inventoryId: number): Observable<InventoryDTO> {
-    return this.http.get<InventoryDTO>(this.baseUrl + '/' + inventoryId);
+  getById(inventoryId: number) {
+    return this.http.get(this.baseUrl + '/' + inventoryId);
   }
 
-  remove(inventoryId: number): Observable<any> {
+  remove(inventoryId: number) {
     return this.http.delete(this.baseUrl + '/delete/' + inventoryId);
   }
 
-  updateData(inventory: InventoryDTO): Observable<any> {
+  updateData(inventory: InventoryDTO) {
     return this.http.put(this.baseUrl + '/update/' + inventory.inventoryId, inventory);
   }
 }

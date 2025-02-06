@@ -6,11 +6,8 @@
               <h2 class="form-header" >Entry Form</h2>
               <form [formGroup]="notificationForm" (ngSubmit)="onSubmit()">
 
-                  <!-- Notification ID -->
-                  <div class="mb-3">
-                      <label for="notificationId" class="form-label" >Notification ID</label>
-                      <input type="number" class="form-control" id="notificationId" formControlName="notificationId" required>
-                  </div>
+
+
 
                   <!-- Message -->
                   <div class="mb-3">
@@ -27,23 +24,20 @@
                       </select>
                   </div>
 
-                  <!-- Created At -->
-                  <div class="mb-3">
-                      <label for="createdAt" class="form-label" >Created At</label>
-                      <input type="datetime-local" class="form-control" id="createdAt" formControlName="createdAt" required>
-                  </div>
+
 
                   <!-- Notification Type -->
                   <div class="mb-3">
                       <label for="notificationType" class="form-label" >Notification Type</label>
-                      <input type="text" class="form-control" id="notificationType" formControlName="notificationType" required>
+                      <select class="form-control" id="notificationType" formControlName="notificationType" required>
+                        <option value="Low Stock">Low Stock</option>
+                        <option value="Out of Stock">Out Of Stock</option>
+
+
+                    </select>
                   </div>
 
-                  <!-- User Name -->
-                  <div class="mb-3">
-                      <label for="userName" class="form-label" >User Name</label>
-                      <input type="text" class="form-control" id="userName" formControlName="userName" required>
-                  </div>
+                 
 
                   <!-- Submit and Reset Buttons -->
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">

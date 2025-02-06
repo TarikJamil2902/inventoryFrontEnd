@@ -5,7 +5,7 @@
           <div class="form-container">
               <h2 class="form-header" >Discount Entry Form</h2>
               <form [formGroup]="discountForm" (ngSubmit)="onSubmit()">
-
+                
                   <!-- Discount Code -->
                   <div class="mb-3">
                       <label for="discountCode" class="form-label" >Discount Code</label>
@@ -20,20 +20,26 @@
 
                   <!-- Percentage -->
                   <div class="mb-3">
-                      <label for="percentage" class="form-label" >Discount Percentage</label>
-                      <input type="number" class="form-control" id="percentage" formControlName="percentage" required>
+                      <label for="discountType" class="form-label" >Discount Type</label>
+                      <select class="form-control" id="discountType" formControlName="discountType" required>
+                        <option value="percentage">Percentage</option>
+                        <option value="fixed amount">Fixed Amount</option>
+                    </select>
                   </div>
-
+                  <div class="mb-3">
+                    <label for="amount" class="form-label" >Discount Amount</label>
+                    <input type="number" class="form-control" id="amount" formControlName="amount" required>
+                </div>
                   <!-- Start Date -->
                   <div class="mb-3">
-                      <label for="startDate" class="form-label" >Start Date</label>
-                      <input type="date" class="form-control" id="startDate" formControlName="startDate" required>
+                      <label for="validFrom" class="form-label" >Start Date</label>
+                      <input type="date" class="form-control" id="startDate" formControlName="validFrom" required>
                   </div>
 
                   <!-- End Date -->
                   <div class="mb-3">
-                      <label for="endDate" class="form-label" >End Date</label>
-                      <input type="date" class="form-control" id="endDate" formControlName="endDate" required>
+                      <label for="validUntil" class="form-label" >End Date</label>
+                      <input type="date" class="form-control" id="validUntil" formControlName="validUntil" required>
                   </div>
 
                   <!-- Status -->
@@ -41,7 +47,7 @@
                       <label for="status" class="form-label" >Status</label>
                       <select class="form-control" id="status" formControlName="status" required>
                           <option value="Active">Active</option>
-                          <option value="Inactive">Inactive</option>
+                          <option value="Expired">Expired</option>
                       </select>
                   </div>
 

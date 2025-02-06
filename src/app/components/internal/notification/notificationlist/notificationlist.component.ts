@@ -13,7 +13,7 @@ httpClient: any;
 constructor(private notificationService:NotificationService){}
 
 
-notificationList:NotificationDTO[]=[];
+notificationList:any[]=[];
 
   ngOnInit(): void {
     this.notificationService.getAll().subscribe((res:any) => {

@@ -13,7 +13,7 @@ httpClient: any;
 constructor(private discountService:DiscountService){}
 
 
-discountList:DiscountDTO[]=[];
+discountList:any[]=[];
 
   ngOnInit(): void {
     this.discountService.getAll().subscribe((res:any) => {

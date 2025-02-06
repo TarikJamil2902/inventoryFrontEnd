@@ -24,9 +24,8 @@ export class UpdatenotificationComponent implements OnInit {
     notificationId: new FormControl(),
     message: new FormControl(),
     status: new FormControl(),
-    createdAt: new FormControl(),
     notificationType: new FormControl(),
-    userName: new FormControl()
+   
   });
 
   ngOnInit(): void {

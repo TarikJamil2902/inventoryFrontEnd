@@ -19,7 +19,7 @@ export class CreateNotificationComponent implements OnInit {
   onSubmit() {
     this.notificationService.add(this.notificationForm.value).subscribe((res: any) => {
       console.log("Notification created successfully");
-      this.router.navigateByUrl('/notification-list'); // Adjust route as needed
+      this.router.navigateByUrl('/notificationlist'); // Adjust route as needed
     });
   }
 
@@ -27,8 +27,7 @@ export class CreateNotificationComponent implements OnInit {
     notificationId: new FormControl(),
     message: new FormControl(),
     status: new FormControl('Active'),  // Default value to "Active"
-    createdAt: new FormControl(new Date().toISOString()),  // Default to current date-time
     notificationType: new FormControl(),
-    userName: new FormControl()
+   
   });
 }

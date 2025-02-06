@@ -6,9 +6,8 @@ export interface NotificationDTO {
   notificationId: number;
   message: string;
   status: string;
-  createdAt: string;  // LocalDateTime in Java can be represented as a string in ISO format
   notificationType: string;
-  userName: string;
+ 
 }
 
 @Injectable({
@@ -19,23 +18,23 @@ export class NotificationService {
 
   constructor(private http: HttpClient) {}
 
-  add(notification: NotificationDTO): Observable<any> {
+  add(notification: any) {
     return this.http.post(this.baseUrl + '/create', notification);
   }
 
-  getAll(): Observable<NotificationDTO[]> {
-    return this.http.get<NotificationDTO[]>(this.baseUrl);
+  getAll() {
+    return this.http.get(this.baseUrl);
   }
 
-  getById(notificationId: number): Observable<NotificationDTO> {
-    return this.http.get<NotificationDTO>(this.baseUrl + '/' + notificationId);
+  getById(notificationId: number) {
+    return this.http.get(this.baseUrl + '/' + notificationId);
   }
 
   remove(notificationId: number): Observable<any> {
     return this.http.delete(this.baseUrl + '/delete/' + notificationId);
   }
 
-  updateData(notification: NotificationDTO): Observable<any> {
+  updateData(notification: NotificationDTO) {
     return this.http.put(this.baseUrl + '/update/' + notification.notificationId, notification);
   }
 }

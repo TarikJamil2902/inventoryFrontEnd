@@ -5,9 +5,9 @@
         <th scope="col">Notification ID</th>
         <th scope="col">Message</th>
         <th scope="col">Status</th>
-        <th scope="col">Created At</th>
+
         <th scope="col">Notification Type</th>
-        <th scope="col">User Name</th>
+       
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -16,9 +16,8 @@
         <td>{{ val.notificationId }}</td>
         <td>{{ val.message }}</td>
         <td>{{ val.status }}</td>
-        <td>{{ val.createdAt }}</td>
+
         <td>{{ val.notificationType }}</td>
-        <td>{{ val.userName }}</td>
         <td>
           <a [routerLink]="['/updatenotification/', val.notificationId]">
             <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
