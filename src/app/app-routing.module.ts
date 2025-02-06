@@ -63,14 +63,13 @@ import { CreateProductComponent } from './components/internal/product/createprod
 import { AdminLandingComponent } from './components/dashboard/admin-dashboard/admin-landing/admin-landing.component';
 import { ManagerLandingComponent } from './components/dashboard/manager-dashboard/manager-landing/manager-landing.component';
 import { EmployeeLandingComponent } from './components/dashboard/employee-dashboard/employee-landing/employee-landing.component';
+import { TaxlistComponent } from './components/internal/tax/taxlist/taxlist.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
 
-  { path: 'categorylist', component: ListcategoryComponent },
-  { path: 'createcategory', component: CreatecategoryComponent },
-  { path: 'updatecategory/:Id', component: UpdatecategoryComponent },
+
   { path: 'about', component: AboutComponent },
   { path: 'admin', component: AdminDashboardComponent },
   { path: 'manager', component: ManagerDashboardComponent },
@@ -80,82 +79,101 @@ const routes: Routes = [
   { path: 'adminesidenav', component: AdminsidenavComponent },
   { path: 'managersidenav', component: ManagersidenavComponent },
 
-  { path: 'paymentlist', component: PaymentlistComponent },
-  { path: 'createpayment', component: CreatePaymentComponent },
-  { path: 'updatepayment/:Id', component: UpdatepaymentComponent },
 
-  { path: 'orderlist', component: OrderlistComponent },
-  { path: 'createorder', component: CreateOrderComponent },
-  { path: 'updateorder/:Id', component: UpdateorderComponent },
 
-  { path: 'orderitemlist', component: OrderitemlistComponent },
-  { path: 'createorderitem', component: CreateOrderItemComponent },
-  { path: 'updateorderitem/:Id', component: UpdateorderitemComponent },
-
-  { path: 'customerlist', component: CustomerlistComponent },
-  { path: 'createcustomer', component: CreatecustomerComponent },
-  { path: 'updatecustomer/:Id', component: UpdatecustomerComponent },
-  
-  { path: 'warehouselist', component: WarehouselistComponent },
-  { path: 'createwarehouse', component: CreatewarehouseComponent },
-  { path: 'updatewarehouse/:Id', component: UpdateWarehouseComponent },
-
-  { path: 'supplierlist', component: SupplierlistComponent },
-  { path: 'createsupplier', component: CreatesupplierComponent },
-  { path: 'updatesupplier/:Id', component: UpdateSupplierComponent },
-
-  { path: 'shipmentlist', component: ShipmentlistComponent },
-  { path: 'createshipment', component: CreateshipmentComponent },
-  { path: 'updateshipment/:Id', component: UpdateShipmentComponent },
-
-  { path: 'returnlist', component: ReturnlistComponent },
-  { path: 'createreturn', component: CreatereturnComponent },
-  { path: 'updatereturn/:Id', component: UpdateReturnComponent },
-
-  { path: 'reportlist', component: ReportlistComponent },
-  { path: 'createreport', component: CreatereportComponent },
-  { path: 'updatereport/:Id', component: UpdateReportComponent },
-
-  { path: 'purchaseorderlist', component: PurchaseorderlistComponent },
-  { path: 'createpurchaseorder', component: CreatepurchaseorderComponent },
-  { path: 'updatepurchaseorder/:Id', component: UpdatePurchaseOrderComponent },
-
-  { path: 'productlist', component: ProductlistComponent },
-  { path: 'createproduct', component: CreateProductComponent },
-  { path: 'updateproduct/:Id', component: UpdateProductComponent },
-
-  { path: 'orderitemlist', component: OrderitemlistComponent },
-  { path: 'createorderitem', component: CreateOrderItemComponent },
-  { path: 'updateorderitem/:Id', component: UpdateorderitemComponent },
-
-  { path: 'notificationlist', component: NotificationlistComponent },
-  { path: 'createnotification', component: CreateNotificationComponent },
-  { path: 'updatenotification/:Id', component: UpdatenotificationComponent },
-
-  { path: 'inventorylist', component: InventorylistComponent },
-  { path: 'createinventory', component: CreateinventoryComponent },
-  { path: 'updateinventory/:Id', component: UpdateinventoryComponent },
-
-  { path: 'employeelist', component: EmployeelistComponent },
-  { path: 'createemployee', component: CreateemployeeComponent },
-  { path: 'updateemployee/:Id', component: UpdateemployeeComponent },
-
-  { path: 'discountlist', component: DiscountlistComponent },
-  { path: 'creatediscount', component: CreatediscountComponent },
-  { path: 'updatediscount/:Id', component: UpdatediscountComponent },
-
-  { path: 'auditloglist', component: SupplierlistComponent },
-  { path: 'createauditlog', component: CreateauditlogComponent },
-  { path: 'updateauditlog/:Id', component: UpdateauditlogComponent },
-
-  { path: '', redirectTo: 'admin', pathMatch: 'full' },
-  { path: 'admin', component: AdminLandingComponent },
 
   { path: '', redirectTo: 'manager', pathMatch: 'full' },
   { path: 'manager', component: ManagerLandingComponent },
 
   { path: '', redirectTo: 'employee', pathMatch: 'full' },
   { path: 'employee', component: EmployeeLandingComponent },
+
+
+ { path: 'adminesidenav', component: AdminsidenavComponent },
+  { path: '', redirectTo: 'admin', pathMatch: 'full' },
+
+
+  { path: 'admin', component: AdminDashboardComponent ,
+    children: [
+      { path: '', component: AdminLandingComponent },
+      { path: 'orderitemlist', component: OrderitemlistComponent },
+
+      { path: 'createorderitem', component: CreateOrderItemComponent },
+      { path: 'updateorderitem/:Id', component: UpdateorderitemComponent },
+
+      { path: 'paymentlist', component: PaymentlistComponent },
+      { path: 'createpayment', component: CreatePaymentComponent },
+      { path: 'updatepayment/:Id', component: UpdatepaymentComponent },
+      { path: 'categorylist', component: ListcategoryComponent },
+      { path: 'createcategory', component: CreatecategoryComponent },
+      { path: 'updatecategory/:Id', component: UpdatecategoryComponent },
+      { path: 'orderlist', component: OrderlistComponent },
+      { path: 'createorder', component: CreateOrderComponent },
+      { path: 'updateorder/:Id', component: UpdateorderComponent },
+
+
+
+      { path: 'customerlist', component: CustomerlistComponent },
+      { path: 'createcustomer', component: CreatecustomerComponent },
+      { path: 'updatecustomer/:Id', component: UpdatecustomerComponent },
+
+      { path: 'warehouselist', component: WarehouselistComponent },
+      { path: 'createwarehouse', component: CreatewarehouseComponent },
+      { path: 'updatewarehouse/:Id', component: UpdateWarehouseComponent },
+
+      { path: 'supplierlist', component: SupplierlistComponent },
+      { path: 'createsupplier', component: CreatesupplierComponent },
+      { path: 'updatesupplier/:Id', component: UpdateSupplierComponent },
+
+      { path: 'shipmentlist', component: ShipmentlistComponent },
+      { path: 'createshipment', component: CreateshipmentComponent },
+      { path: 'updateshipment/:Id', component: UpdateShipmentComponent },
+
+      { path: 'returnlist', component: ReturnlistComponent },
+      { path: 'createreturn', component: CreatereturnComponent },
+      { path: 'updatereturn/:Id', component: UpdateReturnComponent },
+
+      { path: 'reportlist', component: ReportlistComponent },
+      { path: 'createreport', component: CreatereportComponent },
+      { path: 'updatereport/:Id', component: UpdateReportComponent },
+
+      { path: 'purchaseorderlist', component: PurchaseorderlistComponent },
+      { path: 'createpurchaseorder', component: CreatepurchaseorderComponent },
+      { path: 'updatepurchaseorder/:Id', component: UpdatePurchaseOrderComponent },
+
+      { path: 'productlist', component: ProductlistComponent },
+      { path: 'createproduct', component: CreateProductComponent },
+      { path: 'updateproduct/:Id', component: UpdateProductComponent },
+
+      { path: 'orderitemlist', component: OrderitemlistComponent },
+      { path: 'createorderitem', component: CreateOrderItemComponent },
+      { path: 'updateorderitem/:Id', component: UpdateorderitemComponent },
+
+      { path: 'notificationlist', component: NotificationlistComponent },
+      { path: 'createnotification', component: CreateNotificationComponent },
+      { path: 'updatenotification/:Id', component: UpdatenotificationComponent },
+
+      { path: 'inventorylist', component: InventorylistComponent },
+      { path: 'createinventory', component: CreateinventoryComponent },
+      { path: 'updateinventory/:Id', component: UpdateinventoryComponent },
+
+      { path: 'employeelist', component: EmployeelistComponent },
+      { path: 'createemployee', component: CreateemployeeComponent },
+      { path: 'updateemployee/:Id', component: UpdateemployeeComponent },
+
+      { path: 'discountlist', component: DiscountlistComponent },
+      { path: 'creatediscount', component: CreatediscountComponent },
+      { path: 'updatediscount/:Id', component: UpdatediscountComponent },
+
+      { path: 'auditloglist', component: SupplierlistComponent },
+      { path: 'createauditlog', component: CreateauditlogComponent },
+      { path: 'updateauditlog/:Id', component: UpdateauditlogComponent },
+
+
+    ]
+
+  },
+  { path: '', redirectTo: 'admindashboard', pathMatch: 'full' }
 
 ];
 

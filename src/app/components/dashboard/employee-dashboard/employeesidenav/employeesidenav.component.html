@@ -1,4 +1,4 @@
-<nav class="sidebar">
+<nav class="sidebar" [ngClass]="{'collapsed': isCollapsed}">
   <div class="sidebar-header">
     <h3>Employee Panel</h3>
     <button class="toggle-btn" (click)="toggleSidebar()">
@@ -7,9 +7,11 @@
   </div>
 
   <ul class="menu-list">
-    <li *ngFor="let item of menuItems" (click)="navigate(item.link)">
-      <i class="{{ item.icon }}"></i>
-      <span *ngIf="!isCollapsed">{{ item.label }}</span>
+    <li *ngFor="let item of menuItems" class="menu-item">
+      <div (click)="navigate(item.link)" class="menu-link">
+        <i class="{{ item.icon }}"></i>
+        <span *ngIf="!isCollapsed">{{ item.label }}</span>
+      </div>
     </li>
   </ul>
 </nav>
