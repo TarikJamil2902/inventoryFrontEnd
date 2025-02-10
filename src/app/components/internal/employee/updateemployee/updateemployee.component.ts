@@ -60,7 +60,7 @@ export class UpdateemployeeComponent implements OnInit {
     this.employeeService.updateData(this.employeeForm.value).subscribe((res: any) => {
 
 
-      this.router.navigateByUrl('/employeelist');
+      this.router.navigateByUrl('/admin/employeelist');
     })
   }
 
@@ -73,6 +73,7 @@ export class UpdateemployeeComponent implements OnInit {
     phone: new FormControl(),
     hireDate: new FormControl(),
     salary: new FormControl(),
+    shift: new FormControl(),
     status: new FormControl()
   });
 

@@ -1,47 +1,95 @@
 <app-adminsidenav></app-adminsidenav>
 
+<div class="container mt-4 bg-dark text-white p-3 col-12">
+  <!-- Title and Breadcrumb -->
+  <div class="d-flex justify-content-between align-items-center">
+    <h4 class="text-info">Employee List</h4>
+    <nav>
+      <small class="text-light">Dashboard /</small>
+      <small class="text-info">Employee List</small>
+    </nav>
+  </div>
+
+  <!-- Filter, Search, and Action Buttons -->
+  <div class="container mt-4 ">
+    <!-- Filter and Search -->
+    <button class="btn btn-primary me-2 filter-button" (click)="toggleFilter()">
+      <i class="bi bi-sliders"></i> Filter
+    </button>
+
+    <div class="filter-modal" [class.active]="showFilter">
+      <input type="text" [(ngModel)]="searchText" placeholder="Employee Name..." class="form-control" />
+
+      <select [(ngModel)]="selectedShift" class="form-control">
+        <option value="">All Shifts</option>
+        <option value="Morning">Morning</option>
+        <option value="Evening">Evening</option>
+        <option value="Night">Night</option>
+      </select>
+
+      <select [(ngModel)]="selectedStatus" class="form-control">
+        <option value="">All Status</option>
+        <option value="Active">Active</option>
+        <option value="On Leave">On Leave</option>
+      </select>
+
+      <button class="btn btn-success mt-2" (click)="filterEmployees()">Apply Filter</button>
+    </div>
 
 
-<div class="container mt-5">
-  <a routerLink="/createemployee">
-    <button type="button" class="btn btn-outline-dark">Add New Employee</button>
-  </a>
+    <!-- Action Buttons -->
+    <div>
+      <button class="btn btn-success me-2">Excel</button>
+      <button class="btn btn-danger me-2">PDF</button>
+      <button class="btn btn-info text-white me-2">
+        <i class="bi bi-upload"></i> Import
+      </button>
+      <a routerLink="/admin/createemployee">
+        <button class="btn btn-primary">
+          <i class="bi bi-plus-lg"></i> Add Employee
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Employee Table -->
+<!-- Employee Table -->
+<div class="container mt-4">
   <table class="table table-dark table-striped table-hover table-bordered text-center">
     <thead class="table-secondary">
       <tr>
-        <th scope="col">Employee ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Hire Date</th>
-
-        <th scope="col">Salary</th>
-        <th scope="col">Status</th>
+        <th scope="col" (click)="sortData('employeeId')">Employee ID</th>
+        <th scope="col" (click)="sortData('name')">Name</th>
+        <th scope="col" (click)="sortData('email')">Email</th>
+        <th scope="col" (click)="sortData('phone')">Phone</th>
+        <th scope="col" (click)="sortData('hireDate')">Hire Date</th>
+        <th scope="col" (click)="sortData('salary')">Salary</th>
+        <th scope="col" (click)="sortData('shift')">Shift</th>
+        <th scope="col" (click)="sortData('status')">Status</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let val of employeeList">
-        <td>{{ val.employeeId }}</td>
-        <td>{{ val.name }}</td>
-        <td>{{ val.email }}</td>
-        <td>{{ val.phone }}</td>
-        <td>{{ val.hireDate }}</td>
-        <td>{{ val.salary }}</td>
-        <td>{{ val.status }}</td>
-
+      <tr *ngFor="let emp of filteredEmployeeList">
+        <td>{{ emp.employeeId }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.phone }}</td>
+        <td>{{ emp.hireDate }}</td>
+        <td>{{ emp.salary }}</td>
+        <td>{{ emp.shift }}</td>
+        <td>{{ emp.status }}</td>
         <td>
-          <a [routerLink]="['/updateemployee/', val.employeeId]">
+          <a [routerLink]="['/admin/updateemployee/', emp.employeeId]">
             <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
           </a>
           |
-          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(val.employeeId)">Delete</button>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(emp.employeeId)">Delete</button>
         </td>
       </tr>
     </tbody>
   </table>
-
-  <div class="text-end">
-
-  </div>
 </div>

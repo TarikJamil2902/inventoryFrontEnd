@@ -16,10 +16,12 @@ export class CreateemployeeComponent implements OnInit {
     // Initialization logic (if required)
   }
 
+
+  
   onSubmit() {
     this.employeeService.add(this.employeeForm.value).subscribe((res: any) => {
       console.log("Created successfully");
-      this.router.navigateByUrl('/employeelist'); // Adjust the route accordingly
+      this.router.navigateByUrl('/admin/employeelist'); // Adjust the route accordingly
     });
   }
 
@@ -29,6 +31,7 @@ export class CreateemployeeComponent implements OnInit {
     phone: new FormControl(),
     hireDate: new FormControl(),
     salary: new FormControl(),
+    shift: new FormControl(),
     status: new FormControl('Active')  // Default value set to Active
   });
 }

@@ -31,7 +31,7 @@ export class CreatecustomerComponent implements OnInit {
   onSubmit() {
     this.customerService.add(this.customerForm.value).subscribe((res: any) => {
       console.log("Created successfully");
-      this.router.navigateByUrl('/customerlist'); // Adjust the route accordingly
+      this.router.navigateByUrl('/admin/customerlist'); // Adjust the route accordingly
     });
   }
   // onSubmit() {

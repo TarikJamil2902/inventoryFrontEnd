@@ -13,12 +13,15 @@ export class UpdatepaymentComponent implements OnInit {
 
   constructor(
     private paymentService: PaymentService,
+
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   id!: any;
   paymentDetails!: any;  // Adjust according to your actual model
+
+
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['Id'];
@@ -34,12 +37,13 @@ export class UpdatepaymentComponent implements OnInit {
 
   onSubmit() {
     this.paymentService.updateData(this.paymentForm.value).subscribe((res: any) => {
-      this.router.navigateByUrl('/paymentlist');
+      this.router.navigateByUrl('/admin/paymentlist');
     });
   }
 
   // Define the form with the new fields
   paymentForm: FormGroup = new FormGroup({
+    paymentId: new FormControl(),
     orderId: new FormControl(),
     customerId: new FormControl(),
     amount: new FormControl(),

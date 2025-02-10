@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service'; // Ensure this service exists
+import { SupplierService } from 'src/app/services/supplier.service';
 
 @Component({
   selector: 'app-createproduct',
@@ -10,21 +12,37 @@ import { ProductService } from 'src/app/services/product.service'; // Ensure thi
 })
 export class CreateProductComponent implements OnInit {
 
-  constructor(private productService: ProductService, private router: Router) { }
+  constructor(private productService: ProductService,
+    private categoryService : CategoryService,
+    private supplierService : SupplierService,
+
+
+     private router: Router) { }
+
+     categorylist: any[] = [];
+     supplierlist: any[] = [];
 
   ngOnInit(): void {
-    // Initialization logic if necessary
+    this.categoryService.getAll().subscribe((res: any) => {
+      this.categorylist = res;
+    });
+
+    this.supplierService.getAll().subscribe((res: any) => {
+      this.supplierlist = res;
+    });
   }
 
   onSubmit() {
+    console.log(this.productForm.value);
+
     this.productService.add(this.productForm.value).subscribe((res: any) => {
       console.log("Product created successfully");
-      this.router.navigateByUrl('/product-list'); // Adjust route as needed
+      this.router.navigateByUrl('/admin/productlist'); // Adjust route as needed
     });
   }
 
   productForm: FormGroup = new FormGroup({
-    productId: new FormControl(),
+
     name: new FormControl(),
     description: new FormControl(),
     size: new FormControl(),

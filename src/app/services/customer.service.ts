@@ -33,15 +33,15 @@ export class CustomerService {
     return this.http.get(this.baseUrl);
   }
 
-  remove(customerId: number): Observable<any> {
+  remove(customerId: any){
     return this.http.delete(this.baseUrl + '/delete/' + customerId);
   }
 
-  getById(customerId: number): Observable<any> {
+  getById(customerId: any) {
     return this.http.get(this.baseUrl + '/' + customerId);
   }
 
-  updateData(customer: any): Observable<any> {
+  updateData(customer: any) {
     return this.http.put(this.baseUrl + '/update/' + customer.customerId, customer);
   }
 }

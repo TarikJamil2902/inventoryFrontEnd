@@ -50,7 +50,7 @@ export class UpdateorderComponent implements OnInit {
 
   onSubmit() {
     this.orderService.updateData(this.orderForm.value).subscribe(() => {
-      this.router.navigateByUrl('/orderlist');
+      this.router.navigateByUrl('/admin/orderlist');
     });
   }
 }

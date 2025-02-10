@@ -33,12 +33,21 @@
             <input type="number" class="form-control" id="salary" formControlName="salary" required>
         </div>
 
+        <div class="mb-3">
+          <label for="shift" class="form-label" >Shift</label>
+          <select class="form-control" id="shift" formControlName="shift" required>
+            <option value="Morning">Morning</option>
+            <option value="Evening">Evening</option>
+            <option value="Night">Night</option>
+          </select>
+      </div>
+
         <!-- Status -->
         <div class="mb-3">
             <label for="status" class="form-label" >Status</label>
             <select class="form-control" id="status" formControlName="status" required>
                 <option value="Active">Active</option>
-                <option value="Inactive">Inactive</option>
+                <option value="On Leave">On Leave</option>
             </select>
         </div>
           <!-- Submit and Reset Buttons -->

@@ -5,8 +5,8 @@ import { Observable } from 'rxjs';
 export interface ShipmentDTO {
   id: number;
   orderId: number;  // Reference to the Order ID
-  shippingDate: string;  // Shipping date (ISO format)
-  deliveryDate: string;  // Delivery date (ISO format)
+  shippingDate: Date;  // Shipping date (ISO format)
+  deliveryDate: Date;  // Delivery date (ISO format)
   carrierName: string;
   trackingNumber: string;
   shipmentStatus: string;  // e.g., "SHIPPED", "DELIVERED", "PENDING"
@@ -22,23 +22,23 @@ export class ShipmentService {
 
   constructor(private http: HttpClient) {}
 
-  add(shipment: ShipmentDTO): Observable<any> {
+  add(shipment: ShipmentDTO){
     return this.http.post(this.baseUrl + '/create', shipment);
   }
 
-  getAll(): Observable<ShipmentDTO[]> {
-    return this.http.get<ShipmentDTO[]>(this.baseUrl);
+  getAll(){
+    return this.http.get(this.baseUrl);
   }
 
-  getById(id: number): Observable<ShipmentDTO> {
-    return this.http.get<ShipmentDTO>(this.baseUrl + '/' + id);
+  getById(id: any) {
+    return this.http.get(this.baseUrl + '/' + id);
   }
 
-  remove(id: number): Observable<any> {
+  remove(id: any) {
     return this.http.delete(this.baseUrl + '/delete/' + id);
   }
 
-  updateData(shipment: ShipmentDTO): Observable<any> {
+  updateData(shipment: any) {
     return this.http.put(this.baseUrl + '/update/' + shipment.id, shipment);
   }
 }

@@ -6,11 +6,7 @@
               <h2 class="form-header" >Entry Form</h2>
               <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
 
-                  <!-- Payment ID -->
-                  <div class="mb-3">
-                      <label for="id" class="form-label" >Payment ID</label>
-                      <input type="number" class="form-control" id="id" formControlName="id" required>
-                  </div>
+
 
                   <!-- Order ID -->
                   <div class="mb-3">
@@ -33,7 +29,11 @@
                   <!-- Payment Method -->
                   <div class="mb-3">
                       <label for="paymentMethod" class="form-label" >Payment Method</label>
-                      <input type="text" class="form-control" id="paymentMethod" formControlName="paymentMethod" required>
+                      <select class="form-control" id="paymentMethod" formControlName="paymentMethod" required>
+                        <option value="COMPLETED">Credit Card</option>
+                        <option value="PENDING">PayPal</option>
+
+                    </select>
                   </div>
 
                   <!-- Payment Status -->

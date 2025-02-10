@@ -32,7 +32,7 @@ import { CustomerlistComponent } from './components/internal/customer/customerli
 import { UpdatecustomerComponent } from './components/internal/customer/updatecustomer/updatecustomer.component';
 import { CreatecustomerComponent } from './components/internal/customer/createcustomer/createcustomer.component'; // Added
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateauditlogComponent } from './components/internal/auditlog/createauditlog/createauditlog.component';
 import { UpdateauditlogComponent } from './components/internal/auditlog/updateauditlog/updateauditlog.component';
 import { AuditloglistComponent } from './components/internal/auditlog/auditloglist/auditloglist.component';
@@ -84,7 +84,6 @@ import { CreateProductComponent } from './components/internal/product/createprod
 import { AdminLandingComponent } from './components/dashboard/admin-dashboard/admin-landing/admin-landing.component';
 import { ManagerLandingComponent } from './components/dashboard/manager-dashboard/manager-landing/manager-landing.component';
 import { EmployeeLandingComponent } from './components/dashboard/employee-dashboard/employee-landing/employee-landing.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -173,6 +172,7 @@ import { EmployeeLandingComponent } from './components/dashboard/employee-dashbo
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
 
   ],
   providers: [

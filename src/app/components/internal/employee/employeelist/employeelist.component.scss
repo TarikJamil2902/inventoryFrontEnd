@@ -1,0 +1,83 @@
+// Ensure the filter section is properly aligned and responsive
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+// Adjust filter input and dropdown widths
+.filter-input,
+.filter-select {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+// Ensure the table is spaced properly below the filters
+table {
+  width: 100%;
+  margin-top: 15px;
+}
+
+// Fix overlapping issue with sidebar
+.container {
+  margin-left: 250px; // Adjust based on your sidebar width
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0; // Remove margin on smaller screens
+  }
+
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+// Ensure the filter button and container are positioned correctly
+.filter-button {
+  position: relative;
+}
+
+// Modal styling for the filter form
+.filter-modal {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: #343a40; // Dark theme
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  width: 250px;
+}
+
+// Show modal when active
+.filter-modal.active {
+  display: block;
+}
+
+// Ensure input fields are properly spaced
+.filter-modal input,
+.filter-modal select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #555;
+  background: #222;
+  color: white;
+}
+
+// Button styles inside the filter modal
+.filter-modal .btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .filter-modal {
+    width: 100%;
+  }
+}

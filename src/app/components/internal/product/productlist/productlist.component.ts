@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ProductDTO, ProductService } from 'src/app/services/product.service';
+import { CategoryService } from 'src/app/services/category.service';
+import { ProductService } from 'src/app/services/product.service';
+import { SupplierService } from 'src/app/services/supplier.service';
 
 @Component({
   selector: 'app-productlist',
@@ -10,14 +12,25 @@ export class ProductlistComponent {
 httpClient: any;
   apiURL: any;
 
-constructor(private productService:ProductService){}
+constructor(private productService:ProductService,
+  private categoryService : CategoryService,
+      private supplierService : SupplierService,
+){}
 
 
-productList:ProductDTO[]=[];
+productList:any[]=[];
+categoryList:any[]=[];
+supplierList:any[]=[];
 
   ngOnInit(): void {
     this.productService.getAll().subscribe((res:any) => {
       this.productList=res;
+    })
+    this.categoryService.getAll().subscribe((res:any) => {
+      this.categoryList=res;
+    })
+    this.supplierService.getAll().subscribe((res:any) => {
+      this.supplierList=res;
     })
   }
 

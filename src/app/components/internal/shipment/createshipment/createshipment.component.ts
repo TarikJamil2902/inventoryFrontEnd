@@ -16,7 +16,7 @@ export class CreateshipmentComponent implements OnInit {
   onSubmit() {
     this.shipmentService.add(this.shipmentForm.value).subscribe((res: any) => {
       console.log("Created successfully");
-      this.router.navigateByUrl('/categorylist');
+      this.router.navigateByUrl('/admin/shipmentlist');
     });
   }
 
