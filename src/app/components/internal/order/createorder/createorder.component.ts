@@ -38,13 +38,12 @@ export class CreateOrderComponent implements OnInit {
     this.shipmentService.getAll().subscribe((res: any) => {
       this.shipmentlist = res;
     });
-    this.orderItemService.getAll().subscribe((res: any) => {
-      this.orderItemlist = res;
-    });
 
   }
 
   onSubmit() {
+    console.log("hello");
+
     this.orderService.add(this.orderForm.value).subscribe((res: any) => {
       console.log("Order created successfully");
       this.router.navigateByUrl('/admin/orderlist'); // Adjust the route as needed

@@ -35,8 +35,8 @@
       <button class="btn btn-info text-white me-2">
         <i class="bi bi-upload"></i> Import
       </button>
-      <button class="btn btn-primary">
-        <i class="bi bi-plus-lg" routerLink="/admin/createcustomer"></i> Add Customer
+      <button class="btn btn-primary" routerLink="/admin/createcustomer">
+        <i class="bi bi-plus-lg" ></i> Add Customer
       </button>
     </div>
   </div>
@@ -75,7 +75,7 @@
         <td>{{ val.status }}</td>
 
         <td>
-          <a [routerLink]="['/updatecustomer/', val.customerId]">
+          <a [routerLink]="['/admin/updatecustomer/', val.customerId]">
             <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
           </a>
           |
@@ -86,7 +86,7 @@
   </table>
 
   <div class="text-end">
-    
+
   </div>
 </div>
 

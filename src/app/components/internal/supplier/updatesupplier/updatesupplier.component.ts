@@ -20,7 +20,7 @@ export class UpdateSupplierComponent implements OnInit {
   supplierData!: any;
 
   ngOnInit(): void {
-    this.supplierId = this.route.snapshot.params['id'];
+    this.supplierId = this.route.snapshot.params['Id'];
     console.log(this.supplierId);
 
     // Fetch the supplier details by ID from the API
@@ -36,7 +36,7 @@ export class UpdateSupplierComponent implements OnInit {
   onSubmit() {
     // Submit the form data to update the supplier
     this.supplierService.updateData(this.supplierForm.value).subscribe((res: any) => {
-      this.router.navigateByUrl('/supplierlist');
+      this.router.navigateByUrl('/admin/supplierlist');
     });
   }
 

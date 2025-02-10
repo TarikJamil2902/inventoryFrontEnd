@@ -92,10 +92,11 @@ const routes: Routes = [
  { path: 'adminesidenav', component: AdminsidenavComponent },
   { path: '', redirectTo: 'admin', pathMatch: 'full' },
 
-
+  // { path: 'admin', redirectTo:"admin/alc", pathMatch: 'full' },
   { path: 'admin', component: AdminDashboardComponent ,
     children: [
-      { path: '', component: AdminLandingComponent },
+      { path: '', redirectTo:"alc", pathMatch: 'full' },
+      { path: 'alc', component: AdminLandingComponent },
       { path: 'orderitemlist', component: OrderitemlistComponent },
 
       { path: 'createorderitem', component: CreateOrderItemComponent },

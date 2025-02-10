@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SupplierDTO, SupplierService } from 'src/app/services/supplier.service';
+import { SupplierService } from 'src/app/services/supplier.service';
 
 @Component({
   selector: 'app-supplierlist',
@@ -13,7 +13,7 @@ httpClient: any;
 constructor(private supplierService:SupplierService){}
 
 
- supplierList:SupplierDTO[]=[];
+ supplierList:any[]=[];
 
   ngOnInit(): void {
     this.supplierService.getAll().subscribe((res:any) => {

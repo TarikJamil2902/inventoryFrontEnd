@@ -13,62 +13,89 @@
           <div class="mb-3">
             <label for="customerName" class="form-label" >Customer Name</label>
             <input type="text" class="form-control" id="customerName" formControlName="customerName" required>
-          </div>
+        </div>
 
-          <div class="mb-3">
+        <!-- Customer Contact -->
+        <div class="mb-3">
             <label for="customerContact" class="form-label" >Customer Contact</label>
             <input type="text" class="form-control" id="customerContact" formControlName="customerContact" required>
-          </div>
+        </div>
 
-          <div class="mb-3">
+        <!-- Order Item IDs -->
+        <!-- <div class="mb-3">
             <label for="orderItemIds" class="form-label" >Order Item IDs</label>
-            <input type="text" class="form-control" id="orderItemIds" formControlName="orderItemIds" required>
-          </div>
+            <input type="text" class="form-control" id="orderItemIds" formControlName="orderItemIds" placeholder="Comma separated IDs" required>
+        </div> -->
 
-          <div class="mb-3">
+        <!-- Total Amount -->
+        <div class="mb-3">
             <label for="totalAmount" class="form-label" >Total Amount</label>
-            <input type="number" class="form-control" id="totalAmount" formControlName="totalAmount" required>
-          </div>
+            <input type="text" class="form-control" id="totalAmount" formControlName="totalAmount" required>
+        </div>
 
-          <div class="mb-3">
+        <!-- Status -->
+        <div class="mb-3">
             <label for="status" class="form-label" >Status</label>
-            <input type="text" class="form-control" id="status" formControlName="status" required>
-          </div>
+            <select class="form-control" id="status" formControlName="status" required>
+                <option value="CANCELLED">CANCELLED</option>
+                <option value="PENDING">PENDING</option>
+                <option value="COMPLETED">COMPLETED</option>
+            </select>
+        </div>
 
-          <div class="mb-3">
+        <!-- Customer ID -->
+        <div class="mb-3">
             <label for="customerId" class="form-label" >Customer ID</label>
-            <input type="number" class="form-control" id="customerId" formControlName="customerId" required>
-          </div>
+            <input type="text" class="form-control" id="customerId" formControlName="customerId" required>
+        </div>
 
-          <div class="mb-3">
+        <!-- Shipment ID -->
+        <div class="mb-3">
             <label for="shipmentId" class="form-label" >Shipment ID</label>
-            <input type="number" class="form-control" id="shipmentId" formControlName="shipmentId" required>
-          </div>
+            <input type="text" class="form-control" id="shipmentId" formControlName="shipmentId" required>
+        </div>
 
-          <div class="mb-3">
+        <!-- Employee ID -->
+        <div class="mb-3">
             <label for="employeeId" class="form-label" >Employee ID</label>
-            <input type="number" class="form-control" id="employeeId" formControlName="employeeId" required>
-          </div>
+            <input type="text" class="form-control" id="employeeId" formControlName="employeeId" required>
+        </div>
 
-          <div class="mb-3">
+        <!-- Shipping Address -->
+        <div class="mb-3">
             <label for="shippingAddress" class="form-label" >Shipping Address</label>
             <input type="text" class="form-control" id="shippingAddress" formControlName="shippingAddress" required>
-          </div>
+        </div>
 
-          <div class="mb-3">
+        <!-- Billing Address -->
+        <div class="mb-3">
             <label for="billingAddress" class="form-label" >Billing Address</label>
             <input type="text" class="form-control" id="billingAddress" formControlName="billingAddress" required>
-          </div>
+        </div>
 
-          <div class="mb-3">
+        <!-- Shipping Method -->
+        <div class="mb-3">
             <label for="shippingMethod" class="form-label" >Shipping Method</label>
-            <input type="text" class="form-control" id="shippingMethod" formControlName="shippingMethod" required>
-          </div>
+            <select class="form-control" id="shippingMethod" formControlName="shippingMethod" required>
+              <option value="Standard Shipping">Standard Shipping</option>
+              <option value="Express Delivery">Express Delivery</option>
+              <option value="Overnight Shipping">Overnight Shipping</option>
+              <option value="Pickup in Store">Pickup in Store</option>
 
-          <div class="mb-3">
+
+          </select>
+        </div>
+
+        <!-- Payment Status -->
+        <div class="mb-3">
             <label for="paymentStatus" class="form-label" >Payment Status</label>
-            <input type="text" class="form-control" id="paymentStatus" formControlName="paymentStatus" required>
-          </div>
+            <select class="form-control" id="paymentStatus" formControlName="paymentStatus" required>
+                <option value="Pending">Pending</option>
+                <option value="Paid">Paid</option>
+                <option value="Failed">Failed</option>
+            </select>
+        </div>
+
 
           <!-- Submit and Reset Buttons -->
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">

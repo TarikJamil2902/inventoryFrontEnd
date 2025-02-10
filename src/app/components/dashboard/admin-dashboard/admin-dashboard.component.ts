@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -8,10 +9,10 @@ import { Chart } from 'chart.js';
 })
 export class AdminDashboardComponent  implements OnInit {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    
+
   }
 
 

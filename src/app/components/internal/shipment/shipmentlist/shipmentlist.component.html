@@ -4,7 +4,7 @@
   <table class="table table-dark table-striped table-hover table-bordered text-center">
     <thead class="table-secondary">
       <tr>
-        <th scope="col">ID</th>
+        <th scope="col">Shipment ID</th>
         <th scope="col">Order ID</th>
         <th scope="col">Shipping Date</th>
         <th scope="col">Delivery Date</th>
@@ -18,7 +18,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let shipment of shipmentList">
-        <td>{{ shipment.id }}</td>
+        <td>{{ shipment.shipmentId }}</td>
         <td>{{ shipment.orderId }}</td>
         <td>{{ shipment.shippingDate }}</td>
         <td>{{ shipment.deliveryDate }}</td>
@@ -28,8 +28,8 @@
         <td>{{ shipment.deliveryAddress }}</td>
         <td>{{ shipment.shippingCost }}</td>
         <td>
-          <a [routerLink]="['/updateshipment', shipment.id]" class="btn btn-outline-success btn-sm me-2">Edit</a>
-          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(shipment.id)">Delete</button>
+          <a [routerLink]="['/admin/updateshipment', shipment.shipmentId]" class="btn btn-outline-success btn-sm me-2">Edit</a>
+          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(shipment.shipmentId)">Delete</button>
         </td>
       </tr>
     </tbody>

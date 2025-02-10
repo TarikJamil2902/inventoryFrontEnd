@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export interface SupplierDTO {
-  supplierId: number;
-  name: string;
-  email: string;  // Updated field
-  phone: string;  // Updated field
-  address: string;
-  paymentTerms: string;  // New field
-  supplierRating: number;  // New field
-  status: string;  // New field
-}
+// export interface SupplierDTO {
+//   supplierId: number;
+//   name: string;
+//   email: string;  // Updated field
+//   phone: string;  // Updated field
+//   address: string;
+//   paymentTerms: string;  // New field
+//   supplierRating: number;  // New field
+//   status: string;  // New field
+// }
 
 @Injectable({
   providedIn: 'root'
@@ -21,23 +21,23 @@ export class SupplierService {
 
   constructor(private http: HttpClient) {}
 
-  add(supplier: SupplierDTO): Observable<any> {
-    return this.http.post(this.baseUrl + '/create', supplier);
+  add(supplier: any) {
+    return this.http.post(this.baseUrl, supplier);
   }
 
-  getAll(): Observable<SupplierDTO[]> {
-    return this.http.get<SupplierDTO[]>(this.baseUrl);
+  getAll(){
+    return this.http.get(this.baseUrl);
   }
 
-  getById(supplierId: number): Observable<SupplierDTO> {
-    return this.http.get<SupplierDTO>(this.baseUrl + '/' + supplierId);
+  getById(supplierId: any){
+    return this.http.get(this.baseUrl + '/' + supplierId);
   }
 
-  remove(supplierId: number): Observable<any> {
-    return this.http.delete(this.baseUrl + '/delete/' + supplierId);
+  remove(supplierId: any) {
+    return this.http.delete(this.baseUrl + '/' + supplierId);
   }
 
-  updateData(supplier: SupplierDTO): Observable<any> {
-    return this.http.put(this.baseUrl + '/update/' + supplier.supplierId, supplier);
+  updateData(supplier: any) {
+    return this.http.put(this.baseUrl + '/' + supplier.supplierId, supplier);
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ReturnDTO, ReturnService } from 'src/app/services/return.service';
+import { ReturnService } from 'src/app/services/return.service';
 
 @Component({
   selector: 'app-returnlist',
@@ -13,7 +13,7 @@ httpClient: any;
 constructor(private returnService:ReturnService){}
 
 
-returnList:ReturnDTO[]=[];
+returnList:any[]=[];
 
   ngOnInit(): void {
     this.returnService.getAll().subscribe((res:any) => {

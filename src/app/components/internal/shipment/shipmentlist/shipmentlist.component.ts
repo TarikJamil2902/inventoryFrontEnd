@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ShipmentDTO, ShipmentService } from 'src/app/services/shipment.service';
+import { ShipmentService } from 'src/app/services/shipment.service';
 
 @Component({
   selector: 'app-shipmentlist',
@@ -8,12 +8,12 @@ import { ShipmentDTO, ShipmentService } from 'src/app/services/shipment.service'
 })
 export class ShipmentlistComponent {
 httpClient: any;
-  apiURL: any;
+apiURL: any;
 
 constructor(private shipmentService:ShipmentService){}
 
 
-shipmentList:ShipmentDTO[]=[];
+shipmentList:any[]=[];
 
   ngOnInit(): void {
     this.shipmentService.getAll().subscribe((res:any) => {

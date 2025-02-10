@@ -1,4 +1,4 @@
-<app-adminsidenav></app-adminsidenav>
+
 
 
 <div class="container mt-5">
@@ -21,7 +21,7 @@
         <td>{{ val.status }}</td>
 
         <td>
-          <a [routerLink]="['/updatecategory/', val.categoryId]">
+          <a [routerLink]="['/admin/updatecategory/', val.categoryId]">
             <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
           </a>
           |
@@ -32,7 +32,7 @@
   </table>
 
   <div class="text-end">
-    <a routerLink="/createcategory">
+    <a routerLink="/admin/createcategory">
       <button type="button" class="btn btn-outline-dark ">Add New Category</button>
     </a>
   </div>

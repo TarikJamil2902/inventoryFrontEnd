@@ -17,28 +17,28 @@ export interface PurchaseOrderDTO {
   providedIn: 'root'
 })
 export class PurchaseOrderService {
-  private baseUrl = 'http://localhost:8080/api/purchase-orders';
+  private baseUrl = 'http://localhost:8080/api/purchaseOrders';
 
   constructor(private http: HttpClient) {}
 
-  add(purchaseOrder: PurchaseOrderDTO): Observable<any> {
-    return this.http.post(this.baseUrl + '/create', purchaseOrder);
+  add(purchaseOrder: any) {
+    return this.http.post(this.baseUrl , purchaseOrder);
   }
 
-  getAll(): Observable<PurchaseOrderDTO[]> {
-    return this.http.get<PurchaseOrderDTO[]>(this.baseUrl);
+  getAll() {
+    return this.http.get(this.baseUrl);
   }
 
-  getById(purchaseOrderId: number): Observable<PurchaseOrderDTO> {
-    return this.http.get<PurchaseOrderDTO>(this.baseUrl + '/' + purchaseOrderId);
+  getById(purchaseOrderId: any) {
+    return this.http.get(this.baseUrl + '/' + purchaseOrderId);
   }
 
-  remove(purchaseOrderId: number): Observable<any> {
-    return this.http.delete(this.baseUrl + '/delete/' + purchaseOrderId);
+  remove(purchaseOrderId: any) {
+    return this.http.delete(this.baseUrl + '/' + purchaseOrderId);
   }
 
-  updateData(purchaseOrder: PurchaseOrderDTO): Observable<any> {
-    return this.http.put(this.baseUrl + '/update/' + purchaseOrder.purchaseOrderId, purchaseOrder);
+  updateData(purchaseOrder: any) {
+    return this.http.put(this.baseUrl + '/' + purchaseOrder.purchaseOrderId, purchaseOrder);
   }
 }
 

@@ -16,7 +16,7 @@ export class CreatesupplierComponent implements OnInit {
   onSubmit() {
     this.supplierService.add(this.supplierForm.value).subscribe((res: any) => {
       console.log("Created successfully");
-      this.router.navigateByUrl('/categorylist');
+      this.router.navigateByUrl('/admin/supplierlist');
     });
   }
 

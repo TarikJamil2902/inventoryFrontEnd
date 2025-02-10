@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { OrderService } from 'src/app/services/order.service';
+import { PurchaseOrderItemService } from 'src/app/services/purchase-order-item.service';
 import { ReturnService } from 'src/app/services/return.service';
 
 @Component({
@@ -12,6 +14,8 @@ export class UpdateReturnComponent implements OnInit {
 
   constructor(
     private returnService: ReturnService,
+     private orderService: OrderService,
+        private purchaseOrderService: PurchaseOrderItemService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
@@ -20,7 +24,7 @@ export class UpdateReturnComponent implements OnInit {
   returnData!: any;
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['Id'];
     console.log(this.id);
 
     // Fetch the return details by ID from the API
@@ -36,7 +40,7 @@ export class UpdateReturnComponent implements OnInit {
   onSubmit() {
     // Submit the form data to update the return
     this.returnService.updateData(this.returnForm.value).subscribe((res: any) => {
-      this.router.navigateByUrl('/returnlist');
+      this.router.navigateByUrl('/admin/returnlist');
     });
   }
 

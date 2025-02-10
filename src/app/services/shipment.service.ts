@@ -2,17 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export interface ShipmentDTO {
-  id: number;
-  orderId: number;  // Reference to the Order ID
-  shippingDate: Date;  // Shipping date (ISO format)
-  deliveryDate: Date;  // Delivery date (ISO format)
-  carrierName: string;
-  trackingNumber: string;
-  shipmentStatus: string;  // e.g., "SHIPPED", "DELIVERED", "PENDING"
-  deliveryAddress: string;
-  shippingCost: number;
-}
+// export interface ShipmentDTO {
+//   shipmentId: number;
+//   orderId: number;  // Reference to the Order ID
+//   shippingDate: Date;  // Shipping date (ISO format)
+//   deliveryDate: Date;  // Delivery date (ISO format)
+//   carrierName: string;
+//   trackingNumber: string;
+//   shipmentStatus: string;  // e.g., "SHIPPED", "DELIVERED", "PENDING"
+//   deliveryAddress: string;
+//   shippingCost: number;
+// }
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +22,8 @@ export class ShipmentService {
 
   constructor(private http: HttpClient) {}
 
-  add(shipment: ShipmentDTO){
-    return this.http.post(this.baseUrl + '/create', shipment);
+  add(shipment: any){
+    return this.http.post(this.baseUrl, shipment);
   }
 
   getAll(){
@@ -35,10 +35,10 @@ export class ShipmentService {
   }
 
   remove(id: any) {
-    return this.http.delete(this.baseUrl + '/delete/' + id);
+    return this.http.delete(this.baseUrl + '/' + id);
   }
 
   updateData(shipment: any) {
-    return this.http.put(this.baseUrl + '/update/' + shipment.id, shipment);
+    return this.http.put(this.baseUrl + '/' + shipment.shipmentId, shipment);
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { OrderService } from 'src/app/services/order.service';
 import { ShipmentService } from 'src/app/services/shipment.service';
 
 @Component({
@@ -9,9 +10,14 @@ import { ShipmentService } from 'src/app/services/shipment.service';
   styleUrls: ['./createshipment.component.scss']
 })
 export class CreateshipmentComponent implements OnInit {
-  constructor(private shipmentService: ShipmentService, private router: Router) { }
+  constructor(private shipmentService: ShipmentService,
+    private orderService: OrderService,
+     private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    
+  }
 
   onSubmit() {
     this.shipmentService.add(this.shipmentForm.value).subscribe((res: any) => {

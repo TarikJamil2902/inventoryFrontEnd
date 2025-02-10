@@ -50,7 +50,7 @@ export class UpdatecustomerComponent implements OnInit {
     this.customerService.updateData(this.customerForm.value).subscribe((res: any) => {
 
 
-      this.router.navigateByUrl('/customerlist')
+      this.router.navigateByUrl('/admin/customerlist')
     })
   }
 

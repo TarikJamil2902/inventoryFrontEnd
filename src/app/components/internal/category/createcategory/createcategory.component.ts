@@ -20,12 +20,12 @@ export class CreatecategoryComponent implements OnInit{
     this.categoryService.add(this.categoryForm.value).subscribe((res: any) => {
       console.log("Created succesfully");
 
-      this.router.navigateByUrl('/categorylist')
+      this.router.navigateByUrl('/admin/categorylist')
     })
   }
 
   categoryForm: FormGroup = new FormGroup({
-    categoryId: new FormControl(),
+    
     categoryName: new FormControl(),
     description: new FormControl(),
     status: new FormControl()

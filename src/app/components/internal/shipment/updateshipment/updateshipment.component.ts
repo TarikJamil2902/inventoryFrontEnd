@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { OrderService } from 'src/app/services/order.service';
 import { ShipmentService } from 'src/app/services/shipment.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class UpdateShipmentComponent implements OnInit {
 
   constructor(
     private shipmentService: ShipmentService,
+    private orderService: OrderService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
@@ -20,7 +22,7 @@ export class UpdateShipmentComponent implements OnInit {
   shipmentData!: any;
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['Id'];
     console.log(this.id);
 
     // Fetch the shipment details by ID from the API
@@ -36,13 +38,13 @@ export class UpdateShipmentComponent implements OnInit {
   onSubmit() {
     // Submit the form data to update the shipment
     this.shipmentService.updateData(this.shipmentForm.value).subscribe((res: any) => {
-      this.router.navigateByUrl('/shipmentlist');
+      this.router.navigateByUrl('/admin/shipmentlist');
     });
   }
 
   // Form group for updating the shipment
   shipmentForm: FormGroup = new FormGroup({
-    id: new FormControl(),
+    shipmentId: new FormControl(),
     orderId: new FormControl(),
     shippingDate: new FormControl(),
     deliveryDate: new FormControl(),

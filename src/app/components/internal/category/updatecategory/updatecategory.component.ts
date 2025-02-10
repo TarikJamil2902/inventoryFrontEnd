@@ -38,7 +38,7 @@ export class UpdatecategoryComponent implements OnInit {
     this.categoryService.updateData(this.categoryForm.value).subscribe((res: any) => {
 
 
-      this.router.navigateByUrl('/categorylist')
+      this.router.navigateByUrl('/admin/categorylist')
     })
   }
 

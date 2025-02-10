@@ -24,16 +24,16 @@ export class UpdateorderComponent implements OnInit {
     orderId: new FormControl(),
     customerName: new FormControl(),
     customerContact: new FormControl(),
-    orderItemIds: new FormControl(),
+    orderItemIds: new FormControl([]),  // Default as an empty array
     totalAmount: new FormControl(),
-    status: new FormControl(),
+    status: new FormControl('Active'),  // Default to Active
     customerId: new FormControl(),
     shipmentId: new FormControl(),
     employeeId: new FormControl(),
     shippingAddress: new FormControl(),
     billingAddress: new FormControl(),
     shippingMethod: new FormControl(),
-    paymentStatus: new FormControl()
+    paymentStatus: new FormControl('Pending')  
   });
 
   ngOnInit(): void {
