@@ -14,9 +14,8 @@ export class CreatepurchaseorderComponent implements OnInit {
   ngOnInit(): void { }
 
   onSubmit() {
-    let purchaseOrderFormvalue=this.purchaseOrderForm.value;
-    purchaseOrderFormvalue.purchaseOrderItemIds= purchaseOrderFormvalue.purchaseOrderItemIds.split(",")
-    this.purchaseOrderService.add(purchaseOrderFormvalue).subscribe((res: any) => {
+
+    this.purchaseOrderService.add(this.purchaseOrderForm.value).subscribe((res: any) => {
       console.log("Created successfully");
       this.router.navigateByUrl('/admin/purchaseorderlist');
     });
@@ -25,11 +24,12 @@ export class CreatepurchaseorderComponent implements OnInit {
   purchaseOrderForm: FormGroup = new FormGroup({
 
     supplierId: new FormControl(),
-    purchaseOrderItemIds: new FormControl(),
+    purchaseOrderItems: new FormControl(),
     orderDate: new FormControl(),
     deliveryDate: new FormControl(),
     status: new FormControl(),
     totalAmount: new FormControl(),
-    paymentTerms: new FormControl()
+    paymentTerms: new FormControl(),
+    createdBy: new FormControl()
   });
 }

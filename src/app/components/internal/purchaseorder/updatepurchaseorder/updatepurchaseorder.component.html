@@ -11,46 +11,60 @@
                   <input type="number" class="form-control" id="purchaseOrderId" formControlName="purchaseOrderId" required>
                 </div>
 
+                <!-- Supplier ID -->
                 <div class="mb-3">
                   <label for="supplierId" class="form-label" >Supplier ID</label>
                   <input type="number" class="form-control" id="supplierId" formControlName="supplierId" required>
-                </div>
+              </div>
 
-                <div class="mb-3">
+              <!-- Purchase Order Item IDs -->
+              <div class="mb-3">
                   <label for="purchaseOrderItemIds" class="form-label" >Purchase Order Item IDs</label>
-                  <input type="text" class="form-control" id="purchaseOrderItemIds" formControlName="purchaseOrderItemIds" required placeholder="Comma-separated list of Item IDs">
-                </div>
+                  <input type="text" class="form-control" id="purchaseOrderItemIds" formControlName="purchaseOrderItems" required>
+              </div>
 
-                <div class="mb-3">
+              <!-- Order Date -->
+              <div class="mb-3">
                   <label for="orderDate" class="form-label" >Order Date</label>
                   <input type="date" class="form-control" id="orderDate" formControlName="orderDate" required>
-                </div>
+              </div>
 
-                <div class="mb-3">
+              <!-- Delivery Date -->
+              <div class="mb-3">
                   <label for="deliveryDate" class="form-label" >Delivery Date</label>
                   <input type="date" class="form-control" id="deliveryDate" formControlName="deliveryDate" required>
-                </div>
+              </div>
 
-                <div class="mb-3">
+              <!-- Status -->
+              <div class="mb-3">
                   <label for="status" class="form-label" >Status</label>
-                  <input type="text" class="form-control" id="status" formControlName="status" required>
-                </div>
+                  <select class="form-control" id="status" formControlName="status" required>
+                      <option value="PENDING">PENDING</option>
+                      <option value="RECEIVED">RECEIVED</option>
+                  </select>
+              </div>
 
-                <div class="mb-3">
+              <!-- Total Amount -->
+              <div class="mb-3">
                   <label for="totalAmount" class="form-label" >Total Amount</label>
                   <input type="number" class="form-control" id="totalAmount" formControlName="totalAmount" required>
-                </div>
+              </div>
 
-                <div class="mb-3">
+              <!-- Payment Terms -->
+              <div class="mb-3">
                   <label for="paymentTerms" class="form-label" >Payment Terms</label>
                   <input type="text" class="form-control" id="paymentTerms" formControlName="paymentTerms" required>
-                </div>
+              </div>
+              <div class="mb-3">
+                <label for="createdBy" class="form-label" >Created By</label>
+                <input type="text" class="form-control" id="createdBy" formControlName="createdBy" required>
+            </div>
 
-                <!-- Submit and Reset Buttons -->
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <!-- Submit and Reset Buttons -->
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                   <button type="reset" class="btn btn-secondary me-md-2">Reset</button>
                   <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
+              </div>
               </form>
           </div>
       </div>

@@ -7,7 +7,7 @@ export interface NotificationDTO {
   message: string;
   status: string;
   notificationType: string;
- 
+
 }
 
 @Injectable({
@@ -19,22 +19,22 @@ export class NotificationService {
   constructor(private http: HttpClient) {}
 
   add(notification: any) {
-    return this.http.post(this.baseUrl + '/create', notification);
+    return this.http.post(this.baseUrl , notification);
   }
 
   getAll() {
     return this.http.get(this.baseUrl);
   }
 
-  getById(notificationId: number) {
+  getById(notificationId: any) {
     return this.http.get(this.baseUrl + '/' + notificationId);
   }
 
-  remove(notificationId: number): Observable<any> {
-    return this.http.delete(this.baseUrl + '/delete/' + notificationId);
+  remove(notificationId: any){
+    return this.http.delete(this.baseUrl + '/' + notificationId);
   }
 
-  updateData(notification: NotificationDTO) {
-    return this.http.put(this.baseUrl + '/update/' + notification.notificationId, notification);
+  updateData(notification: any) {
+    return this.http.put(this.baseUrl + '/' + notification.notificationId, notification);
   }
 }

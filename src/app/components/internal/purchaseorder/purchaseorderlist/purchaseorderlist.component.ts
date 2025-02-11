@@ -13,7 +13,7 @@ httpClient: any;
 constructor(private purchaseOrderService:PurchaseOrderService){}
 
 
-purchaseOrderList:PurchaseOrderDTO[]=[];
+purchaseOrderList:any[]=[];
 
   ngOnInit(): void {
     this.purchaseOrderService.getAll().subscribe((res:any) => {

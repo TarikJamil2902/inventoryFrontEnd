@@ -34,7 +34,7 @@ export class CreatediscountComponent implements OnInit {
   onSubmit() {
     // Submit the form data to create a new discount
     this.discountService.add(this.discountForm.value).subscribe((res: any) => {
-      this.router.navigateByUrl('/discountlist'); // Redirect after successful submission
+      this.router.navigateByUrl('/admin/discountlist'); // Redirect after successful submission
     });
   }
 }

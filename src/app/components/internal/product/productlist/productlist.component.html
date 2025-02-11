@@ -16,9 +16,9 @@
         <th scope="col">Reorder Level</th>
         <th scope="col">Barcode</th>
         <th scope="col">Status</th>
-        <th scope="col">Image</th>
-        <th scope="col">Category ID</th>
-        <th scope="col">Supplier ID</th>
+
+        <!-- <th scope="col">Category ID</th>
+        <th scope="col">Supplier ID</th> -->
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -36,11 +36,11 @@
         <td>{{ product.reorderLevel }}</td>
         <td>{{ product.barcode }}</td>
         <td>{{ product.status }}</td>
-        <td><img [src]="product.imageUrl" alt="Product Image" width="50"></td>
-        <td>{{ product.categoryId }}</td>
-        <td>{{ product.supplierId }}</td>
+
+        <!-- <td>{{ product.categoryId }}</td>
+        <td>{{ product.supplierId }}</td> -->
         <td>
-          <a [routerLink]="['/updateproduct', product.productId]" class="btn btn-outline-success btn-sm me-2">Edit</a>
+          <a [routerLink]="['/admin/updateproduct', product.productId]" class="btn btn-outline-success btn-sm me-2">Edit</a>
           <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(product.productId)">Delete</button>
         </td>
       </tr>

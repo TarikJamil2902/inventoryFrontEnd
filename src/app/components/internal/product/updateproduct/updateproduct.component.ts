@@ -21,7 +21,7 @@ export class UpdateProductComponent implements OnInit {
   productData!: any;
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['Id'];
     console.log(this.id);
 
     // Fetch the product by ID from the API
@@ -55,8 +55,8 @@ export class UpdateProductComponent implements OnInit {
     reorderLevel: new FormControl(),
     barcode: new FormControl(),
     status: new FormControl(),
-    imageUrl: new FormControl(),
-    categoryId: new FormControl(),
-    supplierId: new FormControl()
+    // imageUrl: new FormControl(),
+    // categoryId: new FormControl(),
+    // supplierId: new FormControl()
   });
 }

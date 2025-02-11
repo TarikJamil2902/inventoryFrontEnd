@@ -17,7 +17,7 @@
                   <!-- Purchase Order Item IDs -->
                   <div class="mb-3">
                       <label for="purchaseOrderItemIds" class="form-label" >Purchase Order Item IDs</label>
-                      <input type="text" class="form-control" id="purchaseOrderItemIds" formControlName="purchaseOrderItemIds" required>
+                      <input type="text" class="form-control" id="purchaseOrderItemIds" formControlName="purchaseOrderItems" required>
                   </div>
 
                   <!-- Order Date -->
@@ -52,6 +52,10 @@
                       <label for="paymentTerms" class="form-label" >Payment Terms</label>
                       <input type="text" class="form-control" id="paymentTerms" formControlName="paymentTerms" required>
                   </div>
+                  <div class="mb-3">
+                    <label for="createdBy" class="form-label" >Created By</label>
+                    <input type="text" class="form-control" id="createdBy" formControlName="createdBy" required>
+                </div>
 
                   <!-- Submit and Reset Buttons -->
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">

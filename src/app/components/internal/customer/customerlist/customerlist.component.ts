@@ -30,4 +30,19 @@ delete(id:any){
     this.ngOnInit();
   })
 }
+
+// Function to handle report download on click
+onDownloadReport(format: string): void {
+  const url = `http://localhost:8080/download/${format}`;
+
+  // Create an anchor tag dynamically and trigger a click event
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'Download.${format}'; // Set default file name
+  document.body.appendChild(link); // Append to DOM for click event to work
+  link.click(); // Trigger the download
+  document.body.removeChild(link); // Clean up
+}
+
+
 }

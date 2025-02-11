@@ -19,15 +19,15 @@ export class CreateNotificationComponent implements OnInit {
   onSubmit() {
     this.notificationService.add(this.notificationForm.value).subscribe((res: any) => {
       console.log("Notification created successfully");
-      this.router.navigateByUrl('/notificationlist'); // Adjust route as needed
+      this.router.navigateByUrl('/admin/notificationlist'); // Adjust route as needed
     });
   }
 
   notificationForm: FormGroup = new FormGroup({
-    notificationId: new FormControl(),
+
     message: new FormControl(),
     status: new FormControl('Active'),  // Default value to "Active"
     notificationType: new FormControl(),
-   
+
   });
 }

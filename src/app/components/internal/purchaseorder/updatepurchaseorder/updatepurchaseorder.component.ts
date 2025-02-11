@@ -21,7 +21,7 @@ export class UpdatePurchaseOrderComponent implements OnInit {
   purchaseOrderData!: any;
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['Id'];
     console.log(this.id);
 
     // Fetch the purchase order by ID from the API
@@ -37,7 +37,7 @@ export class UpdatePurchaseOrderComponent implements OnInit {
   onSubmit() {
     // Submit the form data to update the purchase order
     this.purchaseOrderService.updateData(this.purchaseOrderForm.value).subscribe((res: any) => {
-      this.router.navigateByUrl('/purchaseorderlist');
+      this.router.navigateByUrl('/admin/purchaseorderlist');
     });
   }
 
@@ -45,11 +45,12 @@ export class UpdatePurchaseOrderComponent implements OnInit {
   purchaseOrderForm: FormGroup = new FormGroup({
     purchaseOrderId: new FormControl(),
     supplierId: new FormControl(),
-    purchaseOrderItemIds: new FormControl(),
+    purchaseOrderItems: new FormControl(),
     orderDate: new FormControl(),
     deliveryDate: new FormControl(),
     status: new FormControl(),
     totalAmount: new FormControl(),
-    paymentTerms: new FormControl()
+    paymentTerms: new FormControl(),
+    createdBy: new FormControl()
   });
 }

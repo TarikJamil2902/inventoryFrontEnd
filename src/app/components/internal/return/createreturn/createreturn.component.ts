@@ -44,8 +44,8 @@ export class CreatereturnComponent implements OnInit {
 
   returnForm: FormGroup = new FormGroup({
 
-    customerOrderId: new FormControl(),
-    supplierReturnId: new FormControl(),
+    customerOrderIds: new FormControl(),
+
     reasonForReturn: new FormControl(),
     returnDate: new FormControl(),
     returnStatus: new FormControl(),

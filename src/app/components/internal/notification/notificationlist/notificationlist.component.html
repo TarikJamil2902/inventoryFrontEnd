@@ -22,7 +22,7 @@
 
         <td>{{ val.notificationType }}</td>
         <td>
-          <a [routerLink]="['/updatenotification/', val.notificationId]">
+          <a [routerLink]="['/admin/updatenotification/', val.notificationId]">
             <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
           </a>
           |
@@ -33,7 +33,7 @@
   </table>
 
   <div class="text-end">
-    <a routerLink="/createnotification">
+    <a routerLink="/admin/createnotification">
       <button type="button" class="btn btn-outline-dark">Add New Notification</button>
     </a>
   </div>

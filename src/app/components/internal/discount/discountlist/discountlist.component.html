@@ -28,7 +28,7 @@
         <td>{{ val.status }}</td>
 
         <td>
-          <a [routerLink]="['/updatediscount/', val.discountId]">
+          <a [routerLink]="['/admin/updatediscount/', val.discountId]">
             <button type="button" class="btn btn-outline-success btn-sm">Edit</button>
           </a>
           |
@@ -39,7 +39,7 @@
   </table>
 
   <div class="text-end">
-    <a routerLink="/creatediscount">
+    <a routerLink="/admin/creatediscount">
       <button type="button" class="btn btn-outline-dark">Add New Discount</button>
     </a>
   </div>

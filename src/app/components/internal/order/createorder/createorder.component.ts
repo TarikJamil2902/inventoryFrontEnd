@@ -65,4 +65,22 @@ export class CreateOrderComponent implements OnInit {
     shippingMethod: new FormControl(),
     paymentStatus: new FormControl('Pending')  // Default payment status
   });
+
+
+  populateDemoData() {
+    this.orderForm.setValue({
+      customerName: 'Tarik Jamil',
+      customerContact: '123-456-7890',
+      orderItemIds: 2,  // Example item IDs
+      totalAmount: 150.00,
+      status: 'PENDING',
+      customerId: 1,  // Example customer ID
+      shipmentId: 1,  // Example shipment ID
+      employeeId: 1,  // Example employee ID
+      shippingAddress: '123 Main St, Anytown, USA',
+      billingAddress: '123 Main St, Anytown, USA',
+      shippingMethod: 'Standard Shipping',
+      paymentStatus: 'Pending'
+    });
+  }
 }

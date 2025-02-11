@@ -10,8 +10,8 @@ export class AdminsidenavComponent {
   isCollapsed = false;
 
   menuItems = [
-    { label: 'Dashboard', icon: 'fas fa-home', link: '/admin/dashboard', subItems: [], showSubmenu: false },
-    { label: 'Users', icon: 'fas fa-user', link: '/admin/users', subItems: [], showSubmenu: false },
+    // { label: 'Dashboard', icon: 'fas fa-home', link: '/admin/dashboard', subItems: [], showSubmenu: false },
+    // { label: 'Users', icon: 'fas fa-user', link: '/admin/users', subItems: [], showSubmenu: false },
     { label: 'Orders', icon: 'fas fa-shopping-cart', link: '/admin/orderlist', subItems: [], showSubmenu: false },
     { label: 'Customers', icon: 'fas fa-shopping-cart', link: 'admin/customerlist', subItems: [], showSubmenu: false },
     { label: 'Payments', icon: 'fas fa-credit-card', link: '/admin/paymentlist', subItems: [], showSubmenu: false },

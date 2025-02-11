@@ -6,7 +6,7 @@
     </button>
   </div>
 
-  <ul class="menu-list">
+  <ul class="menu-list col-2">
     <li *ngFor="let item of menuItems" class="menu-item"
         (mouseenter)="item.showSubmenu = true" (mouseleave)="item.showSubmenu = false">
       <div (click)="navigate(item.link)" class="menu-link">

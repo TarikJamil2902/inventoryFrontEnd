@@ -21,7 +21,7 @@ export class UpdateReportComponent implements OnInit {
   reportData!: any;
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['Id'];
     console.log(this.id);
 
     // Fetch the report by ID from the API
@@ -37,7 +37,7 @@ export class UpdateReportComponent implements OnInit {
   onSubmit() {
     // Submit the form data to update the report
     this.reportService.updateData(this.reportForm.value).subscribe((res: any) => {
-      this.router.navigateByUrl('/reportlist');
+      this.router.navigateByUrl('/admin/reportlist');
     });
   }
 

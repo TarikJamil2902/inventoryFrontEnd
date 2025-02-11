@@ -6,19 +6,19 @@
               <h2 class="form-header" >Return Entry Form</h2>
               <form [formGroup]="returnForm" (ngSubmit)="onSubmit()">
 
-                 
+
 
                   <!-- Customer Order ID -->
                   <div class="mb-3">
                       <label for="customerOrderId" class="form-label" >Customer Order ID</label>
-                      <input type="number" class="form-control" id="customerOrderId" formControlName="customerOrderId" required>
+                      <input type="text" class="form-control" id="customerOrderId" formControlName="customerOrderId" required>
                   </div>
 
                   <!-- Supplier Return ID -->
-                  <div class="mb-3">
+                  <!-- <div class="mb-3">
                       <label for="supplierReturnId" class="form-label" >Supplier Return ID</label>
                       <input type="number" class="form-control" id="supplierReturnId" formControlName="supplierReturnId" required>
-                  </div>
+                  </div> -->
 
                   <!-- Reason for Return -->
                   <div class="mb-3">

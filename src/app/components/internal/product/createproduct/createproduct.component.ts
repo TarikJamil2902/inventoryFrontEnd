@@ -54,8 +54,8 @@ export class CreateProductComponent implements OnInit {
     reorderLevel: new FormControl(),
     barcode: new FormControl(),
     status: new FormControl(),
-    imageUrl: new FormControl(),
-    categoryId: new FormControl(),
-    supplierId: new FormControl()
+    // imageUrl: new FormControl(),
+    // categoryId: new FormControl(),
+    // supplierId: new FormControl()
   });
 }

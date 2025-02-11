@@ -12,6 +12,7 @@
         <th scope="col">Status</th>
         <th scope="col">Total Amount</th>
         <th scope="col">Payment Terms</th>
+        <th scope="col">Created By</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -19,12 +20,13 @@
       <tr *ngFor="let order of purchaseOrderList">
         <td>{{ order.purchaseOrderId }}</td>
         <td>{{ order.supplierId }}</td>
-        <td>{{ order.purchaseOrderItemIds }}</td>
+        <td>{{ order.purchaseOrderItems }}</td>
         <td>{{ order.orderDate }}</td>
         <td>{{ order.deliveryDate }}</td>
         <td>{{ order.status }}</td>
         <td>{{ order.totalAmount }}</td>
         <td>{{ order.paymentTerms }}</td>
+        <td>{{ order.createdBy}}</td>
         <td>
           <a [routerLink]="['/admin/updatepurchaseorder', order.purchaseOrderId]" class="btn btn-outline-success btn-sm me-2">Edit</a>
           <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(order.purchaseOrderId)">Delete</button>

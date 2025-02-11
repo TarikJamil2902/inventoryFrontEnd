@@ -8,7 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   templateUrl: './createcategory.component.html',
   styleUrls: ['./createcategory.component.scss']
 })
-export class CreatecategoryComponent implements OnInit{
+export class CreatecategoryComponent implements OnInit {
   constructor(private categoryService: CategoryService, private router: Router) { }
 
 
@@ -25,10 +25,19 @@ export class CreatecategoryComponent implements OnInit{
   }
 
   categoryForm: FormGroup = new FormGroup({
-    
+
     categoryName: new FormControl(),
     description: new FormControl(),
     status: new FormControl()
   });
+
+
+  loadDemoData() {
+    this.categoryForm.setValue({
+      categoryName: 'Demo Category',
+      description: 'This is a demo description',
+      status: 'Active'
+    });
+  }
 
 }

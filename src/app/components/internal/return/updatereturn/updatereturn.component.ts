@@ -14,8 +14,7 @@ export class UpdateReturnComponent implements OnInit {
 
   constructor(
     private returnService: ReturnService,
-     private orderService: OrderService,
-        private purchaseOrderService: PurchaseOrderItemService,
+
     private router: Router,
     private route: ActivatedRoute
   ) { }
@@ -48,7 +47,7 @@ export class UpdateReturnComponent implements OnInit {
   returnForm: FormGroup = new FormGroup({
     returnId: new FormControl(),
     customerOrderId: new FormControl(),
-    supplierReturnId: new FormControl(),
+    // supplierReturnId: new FormControl(),
     reasonForReturn: new FormControl(),
     returnDate: new FormControl(),
     returnStatus: new FormControl(),

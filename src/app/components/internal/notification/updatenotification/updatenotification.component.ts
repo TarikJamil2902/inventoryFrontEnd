@@ -25,11 +25,11 @@ export class UpdatenotificationComponent implements OnInit {
     message: new FormControl(),
     status: new FormControl(),
     notificationType: new FormControl(),
-   
+
   });
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['Id'];
     console.log(this.id);
 
     this.notificationService.getById(this.id).subscribe((val: any) => {
@@ -41,7 +41,7 @@ export class UpdatenotificationComponent implements OnInit {
 
   onSubmit() {
     this.notificationService.updateData(this.notificationForm.value).subscribe(() => {
-      this.router.navigateByUrl('/notificationlist');
+      this.router.navigateByUrl('/admin/notificationlist');
     });
   }
 }

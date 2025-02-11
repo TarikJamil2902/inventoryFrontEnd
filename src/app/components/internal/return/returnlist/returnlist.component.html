@@ -6,7 +6,7 @@
       <tr>
         <th scope="col">Return ID</th>
         <th scope="col">Customer Order ID</th>
-        <th scope="col">Supplier Return ID</th>
+        <!-- <th scope="col">Supplier Return ID</th> -->
         <th scope="col">Reason</th>
         <th scope="col">Return Date</th>
         <th scope="col">Status</th>
@@ -21,7 +21,7 @@
       <tr *ngFor="let returnItem of returnList">
         <td>{{ returnItem.returnId }}</td>
         <td>{{ returnItem.customerOrderId }}</td>
-        <td>{{ returnItem.supplierReturnId }}</td>
+        <!-- <td>{{ returnItem.supplierReturnId }}</td> -->
         <td>{{ returnItem.reasonForReturn }}</td>
         <td>{{ returnItem.returnDate }}</td>
         <td>{{ returnItem.returnStatus }}</td>

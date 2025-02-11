@@ -16,12 +16,12 @@ export class CreatereportComponent implements OnInit {
   onSubmit() {
     this.reportService.add(this.reportForm.value).subscribe((res: any) => {
       console.log("Created successfully");
-      this.router.navigateByUrl('/categorylist');
+      this.router.navigateByUrl('/admin/reportlist');
     });
   }
 
   reportForm: FormGroup = new FormGroup({
-    reportId: new FormControl(),
+
     reportType: new FormControl(),
     startDate: new FormControl(),
     endDate: new FormControl(),

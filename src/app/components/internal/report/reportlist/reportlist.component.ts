@@ -13,7 +13,7 @@ httpClient: any;
 constructor(private reportService:ReportService){}
 
 
-reportList:ReportDTO[]=[];
+reportList:any[]=[];
 
   ngOnInit(): void {
     this.reportService.getAll().subscribe((res:any) => {
